@@ -18,6 +18,8 @@ OSHA-compliant safety procedures and protocols for manufacturing environments. D
 ### Standard Operating Procedures
 Process documentation ensuring consistent, efficient manufacturing operations. Step-by-step guides that maintain quality and reduce errors.
 
+[Longform manufacturing SOP capturing multiple assembly stages and associated QC](https://github.com/BrianOkum/BrianOkum.github.io/blob/41b02dff6a99584ae54ef5fff2f437ae15824ddc/BJOKUM_WritingSample_assembly%26QA%20work%20instructions.pdf)
+
 ### Training Materials
 Onboarding and skills development documentation for technical staff. Materials that get new team members up to speed quickly.
 
