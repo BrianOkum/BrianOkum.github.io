@@ -12,7 +12,7 @@ I create clear, compliant technical documentation for manufacturing businesses p
 ### Standard Operating Procedures
 Process documentation ensuring consistent, efficient manufacturing operations. Step-by-step guides that maintain quality and reduce errors.
 
-[Longform manufacturing SOP capturing multiple assembly stages and associated QC](https://brianokum.github.io/Longform%20SOP.pdf)
+[Longform manufacturing SOP capturing multiple assembly stages and associated QC](https://brianokum.github.io/Longform-SOP.pdf)
 
 [Shortform SOP example](PLACE LINK HERE)
 
