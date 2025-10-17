@@ -1,7 +1,7 @@
 # Brian Okum
-## Technical Writer for Manufacturing & Hard Tech
+## Technical Writer
 
-I create clear, compliant technical documentation for small manufacturing businesses producing innovative hard tech in the Bay Area.
+I create clear, compliant technical documentation for manufacturing businesses producing innovative tech in the Bay Area.
 
 **Specialties:** Equipment Manuals • Safety Documentation • SOPs • Training Materials
 
@@ -25,14 +25,14 @@ Onboarding and skills development documentation for technical staff. Materials t
 
 ## Contact
 
-**Email:** [your email here]  
-**LinkedIn:** [your LinkedIn URL]  
-**Location:** Bay Area, California
+**Email:** bjokum@gmail.com  
+**LinkedIn:** https://www.linkedin.com/in/brian-okum
+**Location:** Oakland, California
 
 ---
 
 ### About This Portfolio
 
-All work samples are intellectual property and are to be used for hiring evaluation purposes only unless expressly authorized in writing.
+All work samples are considered intellectual property and are to be used for hiring/contracting evaluation purposes only.
 
 © 2025 Brian Okum
