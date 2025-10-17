@@ -27,7 +27,7 @@ Process documentation ensuring consistent, efficient manufacturing operations. S
 ## Contact Information
 
 **Email:** bjokum@gmail.com  
-**LinkedIn:** https://www.linkedin.com/in/brian-okum
+**LinkedIn:** https://www.linkedin.com/in/brian-okum  
 **Location:** Oakland, California
 
 ---
