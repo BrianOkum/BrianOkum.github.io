@@ -1,7 +1,8 @@
 # Brian Okum
 ## Technical Writer
 
-I create clear, compliant technical documentation for manufacturing businesses producing innovative tech in the Bay Area.
+I create clear, compliant technical documentation for manufacturing businesses producing innovative tech in the Bay Area.  
+[View my resume](https://brianokum.github.io/resume.pdf)
 
 **Specialties:** SOPs • Safety & Compliance Documentation • Training Materials • Quality Control Documentation
 
