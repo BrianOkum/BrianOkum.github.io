@@ -24,7 +24,7 @@ Process documentation ensuring consistent, efficient manufacturing operations. S
 ### Quality Control Documentation
 Documentation that supports quality control and compliance for single unit to thousand unit runs
 
-[Printed batch records (BMRs)]([PLACE LINK HERE](https://brianokum.github.io/BMR-template.pdf)
+[Printed batch records (BMRs)](https://brianokum.github.io/BMR-template.pdf)
 
 [Electronic manufacturing travelers](trv-screenshot)
 
