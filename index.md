@@ -13,20 +13,20 @@ I create clear, compliant technical documentation for innovative manufacturers.
 ### Standard Operating Procedures
 Process documentation ensuring consistent, efficient manufacturing operations. Step-by-step guides that maintain quality and reduce errors.
 
-[Longform SOPs](https://brianokum.github.io/SOP-longform.pdf)
+- [Longform SOPs](https://brianokum.github.io/SOP-longform.pdf)
 
-[Shortform SOPs](x)
+- [Shortform SOPs](x)
 
-[Process Flows](x)
+- [Process Flows](x)
 
-[Integration of CAD into SOPs](x)
+- [Integration of CAD into SOPs](x)
 
 ### Quality Control Documentation
 Documentation that supports quality control and compliance for single unit to thousand unit runs
 
-[Printed batch records (BMRs)](https://brianokum.github.io/BMR-template.pdf)
+- [Printed batch records (BMRs)](https://brianokum.github.io/BMR-template.pdf)
 
-[Electronic manufacturing travelers](trv-screenshot)
+- [Electronic manufacturing travelers](trv-screenshot)
 
 
 ### Content Management
@@ -37,7 +37,7 @@ There are dozens of content management systems out there - We can find the one t
 - Enterprise Resource Management
 - Quality control integration
 - Documentation-as-training resources
-- Topic-based authoring & multichannel publishing  
+- Topic-based authoring and multichannel publishing  
   
 ---
 
