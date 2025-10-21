@@ -11,7 +11,7 @@ I create clear, compliant technical documentation for innovative manufacturers.
 ## Portfolio
 
 ### Standard Operating Procedures
-Process documentation ensuring consistent, efficient manufacturing operations. Step-by-step guides that maintain quality and reduce errors.
+Process documentation ensuring consistent, efficient manufacturing operations. Step-by-step guides that maintain quality, reduce errors, and can double as training materials.
 
 - [Longform SOPs](https://brianokum.github.io/SOP-longform.pdf)
 
