@@ -17,16 +17,16 @@ Process documentation ensuring consistent, efficient manufacturing operations. S
 
 - [Shortform SOPs](x)
 
-- [Process Flows](x)
+- [Process Flows](process-flow.png)
 
-- [Integration of CAD into SOPs](x)
+- [Integration of CAD into SOPs](dwg-bom.png)
 
 ### Quality Control Documentation
 Documentation that supports quality control and compliance for single unit to thousand unit runs
 
 - [Printed batch records (BMRs)](https://brianokum.github.io/BMR-template.pdf)
 
-- [Electronic manufacturing travelers](trv-screenshot)
+- [Electronic travelers](trv-screenshot.png)
 
 
 ### Content Management
