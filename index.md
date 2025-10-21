@@ -37,7 +37,8 @@ There are dozens of content management systems out there - We can find the one t
 - Enterprise Resource Management
 - Quality control integration
 - Documentation-as-training resources
-- Topic-based authoring & multichannel publishing
+- Topic-based authoring & multichannel publishing  
+  
 ---
 
 ## Contact Information
