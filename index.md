@@ -1,7 +1,7 @@
 # Brian Okum
 ## Technical Writer
 
-I create clear, compliant technical documentation for manufacturing businesses producing innovative tech in the Bay Area.  
+I create clear, compliant technical documentation for innovative manufacturers.
 [View my resume](https://brianokum.github.io/resume.pdf)
 
 **Specialties:** SOPs • Safety & Compliance Documentation • Training Materials • Quality Control Documentation
@@ -13,16 +13,31 @@ I create clear, compliant technical documentation for manufacturing businesses p
 ### Standard Operating Procedures
 Process documentation ensuring consistent, efficient manufacturing operations. Step-by-step guides that maintain quality and reduce errors.
 
-[Longform manufacturing SOP capturing multiple assembly stages and associated QC](https://brianokum.github.io/SOP-longform.pdf)
+[Longform SOPs](https://brianokum.github.io/SOP-longform.pdf)
 
-[Shortform SOP example](PLACE LINK HERE)
+[Shortform SOPs](x)
+
+[Process Flows](x)
+
+[Integration of CAD into SOPs](x)
 
 ### Quality Control Documentation
+Documentation that supports quality control and compliance for single unit to thousand unit runs
 
-[Excel file used to track the product through all stages of production](PLACE LINK HERE)
+[Printed batch records (BMRs)]([PLACE LINK HERE](https://brianokum.github.io/BMR-template.pdf)
 
-[Batch record example](PLACE LINK HERE)
+[Electronic manufacturing travelers](trv-screenshot)
 
+
+### Content Management
+There are dozens of content management systems out there - We can find the one that fits your specific needs such as:
+- Document editing
+- Version control
+- Product Lifecycle Management
+- Enterprise Resource Management
+- Quality control integration
+- Documentation-as-training resources
+- Topic-based authoring & multichannel publishing
 ---
 
 ## Contact Information
