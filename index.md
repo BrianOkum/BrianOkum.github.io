@@ -34,7 +34,6 @@ There are dozens of content management systems out there - We can find the one t
 - Document editing
 - Version control
 - Product Lifecycle Management
-- Enterprise Resource Management
 - Quality control integration
 - Documentation-as-training
 - Topic-based authoring and multichannel publishing  
