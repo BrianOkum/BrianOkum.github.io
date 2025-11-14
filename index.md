@@ -4,7 +4,7 @@
 I create clear, compliant technical documentation for innovative manufacturers. 
 
 
-[View my resume here](https://brianokum.github.io/resume.pdf)
+View my resume [here](https://brianokum.github.io/resume.pdf).
 
 
 ---
