@@ -10,8 +10,6 @@ As a freelance contractor and consultant, I work directly with you to identify y
 
 ---
 
-## Portfolio
-
 ### Standard Operating Procedures
 Process documentation ensuring consistent, efficient manufacturing operations. Step-by-step guides that maintain quality, reduce errors, and may double as training material.
 
