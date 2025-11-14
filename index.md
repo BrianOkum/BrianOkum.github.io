@@ -1,10 +1,5 @@
 ## What I Do:
-
-
-I create clear, compliant technical documentation for innovative manufacturers. 
-
-
-View my resume [here](https://brianokum.github.io/resume.pdf).
+I create clear technical documentation for innovative manufacturers, both for internal teams and external audiences. Good technical documentation bridges communication gaps. Whether translating engineering specifications or scientific processes into actionable steps for production staff, ensuring quality members and manufacturing teams speak the same language, or giving consumers what they need and nothing more, my goal is ultimately to make complex information usable. As a freelance contractor and consultant, I work directly with you to identify your documentation needs and deliver solutions.
 
 
 ---
@@ -44,8 +39,8 @@ There are dozens of content management systems out there with
 **Email:** bjokum@gmail.com  
 **Phone:** 717-319-7777  
 **LinkedIn:** https://www.linkedin.com/in/brian-okum  
-**Location:** Oakland, California
-
+**Location:** Oakland, California  
+View my resume [here](https://brianokum.github.io/resume.pdf).
 ---
 
 ### About This Portfolio
