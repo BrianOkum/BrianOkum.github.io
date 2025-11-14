@@ -17,7 +17,7 @@ Process documentation ensuring consistent, efficient manufacturing operations. S
 
 - I write [longform SOPs](https://brianokum.github.io/SOP-longform.pdf) that may be several hundred pages long. These might use text supported by multiple media formats to provide internal staff with detailed instructions for highly complex assembly and quality control stages.
 
-- I also write shortform SOPs that rely primarily on one mode of instruction (e.g. [photography](x) or [text-based](x)) for simplicity and efficiency. These are well-suited for simple procedures.
+- I also write shortform SOPs that rely primarily on one mode of instruction (e.g. [photography](SOP_imagebased.pdf) or [text-based](x)) for simplicity and efficiency. These are well-suited for simple procedures.
 
 - Besides the instructions themselves, there are many additional elements I may choose to author in an SOP if it brings value. [Process flows](process-flow.png) give production teams a bird's eye view of manufacturing. The integration of [CAD in assambly documentation](dwg-bom.png) is often visually clearer for operators and time-efficient for technical writers than process photography. Simplifying engineers schematics into lay-friendly diagrams (such as this [wiring diagram](diagram_userfriendly.png)) is another way in which the engineering domain of a company can be better integrated with production teams or end-user documentation.
 
