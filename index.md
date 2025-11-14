@@ -14,16 +14,14 @@ I create clear, compliant technical documentation for innovative manufacturers.
 ### Standard Operating Procedures
 Process documentation ensuring consistent, efficient manufacturing operations. Step-by-step guides that maintain quality, reduce errors, and may double as training material.
 
-- I write [longform SOPs](https://brianokum.github.io/SOP-longform.pdf) several hundred pages long using text supported by multiple media formats to provide operators with detailed instructions for the most complex tasks.
+- I write [longform SOPs](https://brianokum.github.io/SOP-longform.pdf) that may be several hundred pages long. These might use text supported by multiple media formats to provide internal staff with detailed instructions for highly complex assembly and quality control stages.
 
-- I also write shortform SOPs that rely primarily on one mode of instruction (e.g. [photography](x) or [text-based](x)) for simplicity and efficiency.
+- I also write shortform SOPs that rely primarily on one mode of instruction (e.g. [photography](x) or [text-based](x)) for simplicity and efficiency. These are well-suited for simple procedures.
 
-- [Process flows](process-flow.png) give production teams a bird's eye view of manufacturing.
-  
-- The integration of [CAD in assambly documentation](dwg-bom.png) produces clear instructions, is an efficient media method for technical writers, and brings the engineering one step closer to production team members.
+- Besides the instructions themselves, there are many additional elements I may choose to author in an SOP if it brings value. [Process flows](process-flow.png) give production teams a bird's eye view of manufacturing. The integration of [CAD in assambly documentation](dwg-bom.png) is often visually clearer for operators and time-efficient for technical writers than process photography. Simplifying engineers schematics into lay-friendly diagrams (such as this [wiring diagram](diagram_userfriendly.png)) is another way in which the engineering domain of a company can be better integrated with production teams or end-user documentation.
 
 ### Quality Control Documentation
-Documentation that supports quality control and compliance for single unit to thousand unit runs
+Good QC documentation is developed alongside standard operating procedures.
 
 - Printed or electronically kept [batch manufacturing records (BMRs)](https://brianokum.github.io/BMR-template.pdf) can support high and low-volume production runs alike
 
@@ -31,8 +29,9 @@ Documentation that supports quality control and compliance for single unit to th
 
 
 ### Content Management
-There are dozens of content management systems out there - Together we can find the one that fits your specific needs:
-- Editing and publication management, including version control
+There are dozens of content management systems out there with 
+- Editing and publication management
+- Version control
 - Compliance
 - Product Lifecycle Management
 - Quality control integration
