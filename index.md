@@ -46,7 +46,7 @@ There are dozens of content management systems out there - Together we can find 
 ## Contact Information
 
 **Email:** bjokum@gmail.com  
-**Phone:** 717-319-7777
+**Phone:** 717-319-7777  
 **LinkedIn:** https://www.linkedin.com/in/brian-okum  
 **Location:** Oakland, California
 
