@@ -46,7 +46,6 @@ There are dozens of content management systems out there with
 **Phone:** 717-319-7777  
 **LinkedIn:** https://www.linkedin.com/in/brian-okum  
 **Location:** Oakland, California  
-View my resume [here](https://brianokum.github.io/resume.pdf).
 
 ---
 
