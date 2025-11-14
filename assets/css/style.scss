@@ -1,14 +1,24 @@
 ---
 ---
-
 @import "{{ site.theme }}";
 
+/* Dark theme colors */
+body {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
 
+.wrapper {
+  background-color: #1a1a1a;
+  width: 90%;
+  max-width: 1200px;
+  padding-top: 20px;
+}
 
-
-
-/* Adjusts the header on the left created by the CONFIG file */
-header { /* this is the left sidebar */
+/* Header/Sidebar styling */
+header {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
   width: 24%;
   float: left;
   padding-left: 20px;
@@ -19,81 +29,6 @@ header { /* this is the left sidebar */
 
 header h1 {
   margin-top: 0;
-}
-
-section { /* this is the main body */
-  width: 68%;
-  float: right;
-  padding: 30px 50px;
-  clear: none;
-}
-
-
-
-
-
-/* Add some breathing room at the top */
-.wrapper {
-  width: 90%;
-  max-width: 1200px;
-  padding-top: 20px;
-}
-
-
-
-
-
-
-/* Widen the content area*/
-.wrapper {
-  width: 90%;
-  max-width: 1200px;
-}
-
-section {
-  width: 65%;
-  float: right;
-  padding: 30px 40px;  /* Add more internal padding */
-}
-
-header {
-  width: 27%;
-  float: left;
-  padding-right: 20px;  /* Add space between header and section */
-}
-
-@media print, screen and (max-width: 960px) {
-  .wrapper {
-    width: auto;
-  }
-  
-  header, section, footer {
-    float: none;
-    width: auto;
-  }
-  
-  section {
-    padding: 20px;
-  }
-}
-
-
-
-
-
-/* Dark theme override, contains colors for text */
-body {
-  background-color: #1a1a1a;
-  color: #e0e0e0;
-}
-
-.wrapper {
-  background-color: #1a1a1a;
-}
-
-header {
-  background-color: #1a1a1a;
-  color: #e0e0e0;
 }
 
 header h1 a {
@@ -108,12 +43,18 @@ header p {
   color: #b0b0b0;
 }
 
+/* Main content section */
 section {
   background-color: #2a2a2a;
   color: #e0e0e0;
   box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  width: 68%;
+  float: right;
+  padding: 30px 50px;
+  clear: none;
 }
 
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
@@ -122,6 +63,7 @@ strong {
   color: #ffffff;
 }
 
+/* Links */
 a {
   color: #4a9eff;
 }
@@ -130,16 +72,34 @@ a:hover {
   color: #6bb6ff;
 }
 
+/* Code blocks */
 code, pre {
   background-color: #1a1a1a;
   border: 1px solid #444;
   color: #e0e0e0;
 }
 
+/* Footer */
 footer {
   color: #808080;
 }
 
 footer a {
   color: #4a9eff;
+}
+
+/* Responsive design */
+@media print, screen and (max-width: 960px) {
+  .wrapper {
+    width: auto;
+  }
+  
+  header, section, footer {
+    float: none;
+    width: auto;
+  }
+  
+  section {
+    padding: 20px;
+  }
 }
