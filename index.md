@@ -47,6 +47,7 @@ There are dozens of content management systems out there with
 **LinkedIn:** https://www.linkedin.com/in/brian-okum  
 **Location:** Oakland, California  
 View my resume [here](https://brianokum.github.io/resume.pdf).
+
 ---
 
 ### About This Portfolio
