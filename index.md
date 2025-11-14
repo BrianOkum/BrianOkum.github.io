@@ -8,7 +8,7 @@ Welcome! This site is still under construction.
 I create clear, compliant technical documentation for innovative manufacturers. 
 [View my resume](https://brianokum.github.io/resume.pdf)
 
-**Specialties:** SOPs •  Training Materials • Quality Control Documentation
+**Specialties:** Manufacturing SOPs •  Training Materials • Quality Control Documentation
 
 ---
 
