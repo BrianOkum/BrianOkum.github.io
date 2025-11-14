@@ -7,20 +7,22 @@
 
 
 
-/* Widen the content area */
+/* Widen the content area*/
 .wrapper {
   width: 90%;
   max-width: 1200px;
 }
 
 section {
-  width: 70%;
+  width: 65%;
   float: right;
+  padding: 30px 40px;  /* Add more internal padding */
 }
 
 header {
-  width: 25%;
+  width: 27%;
   float: left;
+  padding-right: 20px;  /* Add space between header and section */
 }
 
 @media print, screen and (max-width: 960px) {
@@ -31,6 +33,10 @@ header {
   header, section, footer {
     float: none;
     width: auto;
+  }
+  
+  section {
+    padding: 20px;
   }
 }
 
