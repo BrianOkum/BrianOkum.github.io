@@ -42,7 +42,7 @@ I have experience with content management systems that support:
 
 ## Contact Information
 
-**Email:** bjokum@gmail.com
+**Email:** bjokum@gmail.com  
 **Phone:** 717-319-7777  
 **LinkedIn:** [https://www.linkedin.com/in/brian-okum](https://www.linkedin.com/in/brian-okum  )  
 **Location:** Oakland, California  
