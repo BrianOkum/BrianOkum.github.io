@@ -5,7 +5,7 @@ I create clear technical documentation for innovative manufacturers, both for in
 Good technical documentation bridges communication gaps. Whether translating engineering specifications or scientific processes into actionable steps for production staff, ensuring quality and manufacturing teams speak the same language, or giving consumers what they need and nothing more, my goal is ultimately to make complex information usable. 
 
 
-As a freelance contractor and consultant, I work directly with you to identify your documentation needs and deliver solutions."
+As a freelance contractor and consultant, I work directly with you to identify your documentation needs and deliver practical solutions.
 
 
 ---
