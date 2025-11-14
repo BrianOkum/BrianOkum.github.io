@@ -3,6 +3,41 @@
 
 @import "{{ site.theme }}";
 
+
+
+
+
+/* Widen the content area */
+.wrapper {
+  width: 90%;
+  max-width: 1200px;
+}
+
+section {
+  width: 70%;
+  float: right;
+}
+
+header {
+  width: 25%;
+  float: left;
+}
+
+@media print, screen and (max-width: 960px) {
+  .wrapper {
+    width: auto;
+  }
+  
+  header, section, footer {
+    float: none;
+    width: auto;
+  }
+}
+
+
+
+
+
 /* Dark theme override */
 body {
   background-color: #1a1a1a;
