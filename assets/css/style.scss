@@ -8,11 +8,13 @@
 
 
 /* Adjusts the header on the left created by the CONFIG file */
-header {
-  width: 27%;
+header { /* this is the left sidebar */
+  width: 24%;
   float: left;
-  padding-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
   position: relative;
+  margin-top: 60px;
   top: 0;
 }
 
@@ -20,11 +22,10 @@ header h1 {
   margin-top: 0;
 }
 
-section {
-  width: 65%;
+section { /* this is the main body */
+  width: 68%;
   float: right;
-  padding: 30px 40px;
-  margin-top: 60px;
+  padding: 30px 50px;
   clear: none;
 }
 
