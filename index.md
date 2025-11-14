@@ -13,7 +13,7 @@ As a freelance contractor and consultant, I work directly with you to identify y
 ### Standard Operating Procedures
 Process documentation ensuring consistent, efficient manufacturing operations. Step-by-step guides that maintain quality, reduce errors, and may double as training material.
 
-- I write [longform SOPs](https://brianokum.github.io/SOP-longform.pdf) that may be hundred pages long. These utilize text-based instructions and multiple media formats to guide internal staff through complex assembly and quality steps.
+- I write [longform SOPs](https://brianokum.github.io/SOP-longform.pdf) that may be hundreds of pages long. These utilize text-based instructions and multiple media formats to guide internal staff through complex assembly and quality steps.
 
 - I also write shortform SOPs that rely primarily on one instructional mode (e.g. [photography](SOP_imagebased.pdf) or [text-based](x)) for simplicity and efficiency. These work well for simple procedures.
 
