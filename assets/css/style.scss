@@ -12,7 +12,8 @@ body {
   background-color: #1a1a1a;
   width: 90%;
   max-width: 1200px;
-  padding-top: 20px;
+  padding-top: 80px;  /* Increase this number */
+  margin-top: 40px;   /* Add margin too */
 }
 
 /* Header/Sidebar styling */
@@ -23,8 +24,8 @@ header {
   float: left;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 80px;  /* Use padding-top instead of margin-top */
   position: relative;
-  margin-top: 75px;
 }
 
 header h1 {
