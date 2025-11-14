@@ -19,7 +19,7 @@ Process documentation ensuring consistent, efficient manufacturing operations. S
 
 - I write [longform SOPs](https://brianokum.github.io/SOP-longform.pdf) several hundred pages long using text supported by multiple media formats to provide operators with detailed instructions for the most complex tasks.
 
-- I also write shortform SOPs that rely primarily on one mode of instruction (e.g.[photography](x) or [text-based](x)) to get the job done.
+- I also write shortform SOPs that rely primarily on one mode of instruction (e.g. [photography](x) or [text-based](x)) for simplicity and efficiency.
 
 - [Process flows](process-flow.png) give production teams a bird's eye view of manufacturing.
   
