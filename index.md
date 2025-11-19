@@ -49,6 +49,4 @@ I have experience with content management systems that support:
 
 ### About This Portfolio
 
-*All work samples are considered intellectual property and are to be used for hiring and contracting evaluation purposes only.* 
-
 © 2025 Brian Okum
