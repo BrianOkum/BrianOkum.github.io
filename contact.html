@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Brian Okum</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========== STICKY HEADER ========== -->
+  <header class="site-header">
+    <div class="header-left">
+      <h1 class="name">Brian Okum</h1>
+      <p class="title">Technical Writer</p>
+    </div>
+    <nav class="header-nav">
+      <a href="index.html" class="nav-link">Portfolio</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+      <a href="about.html" class="nav-link">About</a>
+    </nav>
+  </header>
+
+  <div class="header-rule"></div>
+
+  <main class="contact-content">
+
+    <p class="contact-intro">
+      If you are interested in hiring me for a professional project and would like 
+      to reach out to discuss your project and my rate, please complete the form 
+      below and I will get back to you as soon as I can.
+    </p>
+
+    <!-- 
+      NOTE: This form uses Formspree for submission on GitHub Pages.
+      To activate it:
+      1. Go to https://formspree.io and create a free account
+      2. Create a new form and copy your form ID
+      3. Replace YOUR_FORM_ID below with your actual Formspree form ID
+      
+      Example: action="https://formspree.io/f/xpzvnqkl"
+    -->
+    <form 
+      class="contact-form" 
+      action="https://formspree.io/f/YOUR_FORM_ID" 
+      method="POST"
+    >
+      <div class="form-row form-row-half">
+        <div class="form-group">
+          <label for="first-name">First Name <span class="required">*</span></label>
+          <input type="text" id="first-name" name="first-name" required>
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name <span class="required">*</span></label>
+          <input type="text" id="last-name" name="last-name" required>
+        </div>
+      </div>
+
+      <div class="form-row form-row-half">
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject <span class="required">*</span></label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message <span class="required">*</span></label>
+        <textarea id="message" name="message" rows="8" required></textarea>
+      </div>
+
+      <button type="submit" class="form-submit">Send Message</button>
+    </form>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <p class="footer-text">Brian Okum 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
