@@ -1,1 +1,460 @@
+/* ============================================================
+   Brian Okum — Portfolio Stylesheet
+   
+   CSS class mapping from InDesign mockup:
+     class1 → .name            (Brian Okum heading)
+     class2 → .title           (Technical Writer subtitle)
+     class3 → .section-heading (Section titles like VISUAL COMMUNICATION)
+     class4 → .section-body-text, .footer-text  (Body text, Aptos font)
+     class5 → .section-tagline (Italic subheader / catchy line)
+   ============================================================ */
 
+/* ---------- RESET & BASE ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Aptos', 'Calibri', 'Segoe UI', sans-serif;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* ---------- STICKY HEADER ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 24px 48px 16px;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* class1 — Name */
+.name {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* class2 — Subtitle */
+.title {
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin-top: 2px;
+  color: #444;
+}
+
+/* Navigation */
+.header-nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 4px 12px;
+  transition: border-color 0.2s ease;
+  border: 1.5px solid transparent;
+}
+
+.nav-link:hover {
+  border-color: #999;
+}
+
+/* Active page indicator — outlined box */
+.nav-link.active {
+  border: 1.5px solid #1a1a1a;
+}
+
+/* Horizontal rule under header */
+.header-rule {
+  position: sticky;
+  top: 88px; /* adjust based on header height */
+  z-index: 99;
+  height: 3px;
+  background-color: #1a1a1a;
+  margin: 0 48px;
+}
+
+
+/* ---------- PORTFOLIO SECTIONS ---------- */
+
+.portfolio-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px 80px;
+}
+
+.portfolio-section {
+  padding: 64px 0;
+}
+
+.portfolio-section + .portfolio-section {
+  border-top: none;
+}
+
+/* class3 — Section headings */
+.section-heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin-bottom: 32px;
+}
+
+/* Section body: two-column layout */
+.section-body {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.section-body.layout-img-left {
+  flex-direction: row;
+}
+
+.section-body.layout-img-right {
+  flex-direction: row-reverse;
+}
+
+/* Media column (carousel or static image) */
+.section-media {
+  flex: 0 0 55%;
+  max-width: 55%;
+}
+
+/* Text column */
+.section-text {
+  flex: 1;
+  min-width: 0;
+}
+
+/* class5 — Tagline / italic subheader */
+.section-tagline {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+/* class4 — Body text */
+.section-body-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+
+/* ---------- IMAGE CAROUSEL ---------- */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 6 / 5;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.carousel-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-slide a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.carousel-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Pagination dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 5;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  /* Larger hit area for desktop usability */
+  outline: 6px solid transparent;
+  transition: background-color 0.2s ease;
+}
+
+.carousel-dot:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-dot.active {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* ---------- STATIC IMAGE ---------- */
+
+.static-image {
+  width: 100%;
+  aspect-ratio: 6 / 5;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.static-image a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.static-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+/* ---------- CONTACT PAGE ---------- */
+
+.contact-content {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 48px 80px;
+}
+
+.contact-intro {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row-half {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row-half .form-group {
+  flex: 1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.required {
+  color: #c00;
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: 'Aptos', 'Calibri', 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background-color: #fff;
+  color: #1a1a1a;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #555;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-submit {
+  font-family: 'Aptos', 'Calibri', 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 12px 32px;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.2s ease;
+}
+
+.form-submit:hover {
+  background-color: #333;
+}
+
+
+/* ---------- ABOUT PAGE ---------- */
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 64px 48px 80px;
+}
+
+.about-placeholder {
+  font-size: 1rem;
+  color: #777;
+  font-style: italic;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.site-footer {
+  text-align: center;
+  padding: 40px 48px;
+}
+
+/* class4 — Footer text */
+.footer-text {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 24px 12px;
+    gap: 12px;
+  }
+
+  .header-nav {
+    gap: 16px;
+  }
+
+  .header-rule {
+    margin: 0 24px;
+    top: 110px;
+  }
+
+  .portfolio-content {
+    padding: 0 24px 60px;
+  }
+
+  .portfolio-section {
+    padding: 40px 0;
+  }
+
+  .section-body {
+    flex-direction: column !important;
+    gap: 24px;
+  }
+
+  .section-media {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .form-row-half {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-content {
+    padding: 32px 24px 60px;
+  }
+
+  .about-content {
+    padding: 40px 24px 60px;
+  }
+}
