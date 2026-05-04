@@ -28,9 +28,18 @@ function initCarousels() {
       dot.classList.add('carousel-dot');
       if (index === 0) dot.classList.add('active');
       dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
-      dot.addEventListener('click', () => {
+      dot.addEventListener('click', (e) => {
+        e.stopPropagation();
         goToSlide(carousel, index);
-        resetAutoSlide(carousel);
+        pauseAutoSlide(carousel);
+        carousel.dataset.lingering = 'true';
+        // 15-second linger, then resume normal timing
+        const lingerTimer = setTimeout(() => {
+          carousel.dataset.lingering = '';
+          nextSlide(carousel);
+          startAutoSlide(carousel, autoSlideInterval);
+        }, 15000);
+        carousel.dataset.lingerTimer = lingerTimer;
       });
       dotsContainer.appendChild(dot);
     });
@@ -44,7 +53,10 @@ function initCarousels() {
     });
 
     carousel.addEventListener('mouseleave', () => {
-      startAutoSlide(carousel, autoSlideInterval);
+      // Don't override a linger pause from a dot click
+      if (carousel.dataset.lingering !== 'true') {
+        startAutoSlide(carousel, autoSlideInterval);
+      }
     });
   });
 }
@@ -90,6 +102,12 @@ function pauseAutoSlide(carousel) {
   if (timerId) {
     clearInterval(parseInt(timerId, 10));
     carousel.dataset.timerId = '';
+  }
+  // Also clear any linger timer from a dot click
+  const lingerTimer = carousel.dataset.lingerTimer;
+  if (lingerTimer) {
+    clearTimeout(parseInt(lingerTimer, 10));
+    carousel.dataset.lingerTimer = '';
   }
 }
 
