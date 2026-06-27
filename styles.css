@@ -6,7 +6,6 @@
      class2 → .title           (Technical Writer subtitle)
      class3 → .section-heading (Section titles like VISUAL COMMUNICATION)
      class4 → .section-body-text, .footer-text  (Body text, Aptos font)
-     class5 → .section-tagline (Italic subheader / catchy line)
    ============================================================ */
 
 /* ---------- RESET & BASE ---------- */
@@ -24,9 +23,9 @@ html {
 }
 
 body {
-  font-family: 'Aptos', 'Calibri', 'Segoe UI', sans-serif;
-  color: #1a1a1a;
-  background-color: #ffffff;
+  font-family: 'Inter', 'Aptos', 'Calibri', 'Segoe UI', sans-serif;
+  color: #ffffe6;
+  background-color: #0e1b2e;
   line-height: 1.6;
 }
 
@@ -48,7 +47,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: #ffffff;
+  background-color: #0e1b2e;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -58,6 +57,18 @@ a {
 .header-left {
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+
+.header-left:hover {
+  opacity: 0.78;
+}
+
+.header-left:focus-visible {
+  outline: 1.5px solid #ffffe6;
+  outline-offset: 4px;
 }
 
 /* class1 — Name */
@@ -73,7 +84,7 @@ a {
   font-size: 1.05rem;
   font-weight: 400;
   margin-top: 2px;
-  color: #444;
+  color: #a8b8c8;
 }
 
 /* Navigation */
@@ -92,12 +103,12 @@ a {
 }
 
 .nav-link:hover {
-  border-color: #999;
+  border-color: #6a8aa8;
 }
 
 /* Active page indicator — outlined box */
 .nav-link.active {
-  border: 1.5px solid #1a1a1a;
+  border: 1.5px solid #ffffe6;
 }
 
 /* Horizontal rule under header */
@@ -106,7 +117,7 @@ a {
   top: 88px; /* adjust based on header height */
   z-index: 99;
   height: 3px;
-  background-color: #1a1a1a;
+  background-color: #ffffe6;
   margin: 0 48px;
 }
 
@@ -129,17 +140,19 @@ a {
 
 /* class3 — Section headings */
 .section-heading {
-  font-size: clamp(2rem, 1.5rem + 1.5vw, 3rem);
+  font-size: clamp(1.8rem, 1.35rem + 1.35vw, 2.7rem);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.01em;
+  word-spacing: 0.1em;
   margin-bottom: 32px;
+  text-align: center;
 }
 
 /* Section body: two-column layout */
 .section-body {
   display: flex;
-  gap: 60px;
+  gap: 80px;
   align-items: center;
 }
 
@@ -151,10 +164,10 @@ a {
   flex-direction: row-reverse;
 }
 
-/* Media column (carousel or static image) */
+/* Media column (carousel or static image) — narrower than before to leave more breathing room */
 .section-media {
-  flex: 0 0 55%;
-  max-width: 55%;
+  flex: 0 0 50%;
+  max-width: 50%;
 }
 
 /* Text column */
@@ -163,21 +176,17 @@ a {
   min-width: 0;
 }
 
-/* class5 — Tagline / italic subheader */
-.section-tagline {
-  font-style: italic;
-  font-size: clamp(1rem, 0.9rem + 0.3vw, 1.2rem);
-  color: #555;
-  margin-bottom: 24px;
-  line-height: 1.4;
-  text-align: center;
-}
-
 /* class4 — Body text */
 .section-body-text {
-  font-size: clamp(1.1rem, 0.95rem + 0.4vw, 1.4rem);
-  line-height: 1.7;
-  color: #333;
+  font-size: clamp(1.2rem, 1.05rem + 0.4vw, 1.5rem);
+  font-weight: 300;
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+/* Vertical gap between stacked paragraphs within a section */
+.section-body-text + .section-body-text {
+  margin-top: 0.5em;
 }
 
 
@@ -186,16 +195,16 @@ a {
 .carousel {
   position: relative;
   width: 100%;
-  aspect-ratio: 6 / 5;
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  overflow: hidden;
+  background-color: #0e1b2e;
 }
 
+/* The aspect-ratio box now lives on the track, so the dots can sit below
+   the image in normal flow rather than overlaying it. */
 .carousel-track {
   position: relative;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 6 / 5;
+  overflow: hidden;
 }
 
 .carousel-slide {
@@ -230,15 +239,12 @@ a {
   object-fit: contain;
 }
 
-/* Pagination dots */
+/* Pagination dots — flow below the carousel image */
 .carousel-dots {
-  position: absolute;
-  bottom: 12px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 12px;
   display: flex;
+  justify-content: center;
   gap: 8px;
-  z-index: 5;
 }
 
 .carousel-dot {
@@ -264,16 +270,16 @@ a {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 230, 0.3);
   transition: background-color 0.2s ease;
 }
 
 .carousel-dot:hover::after {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 230, 0.5);
 }
 
 .carousel-dot.active::after {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 230, 0.8);
 }
 
 
@@ -282,8 +288,7 @@ a {
 .static-image {
   width: 100%;
   aspect-ratio: 6 / 5;
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
+  background-color: #0e1b2e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -317,7 +322,7 @@ a {
 .contact-intro {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: #333;
+  color: #d4d8c4;
   margin-bottom: 40px;
 }
 
@@ -345,29 +350,35 @@ a {
   font-size: 0.85rem;
   font-weight: 500;
   margin-bottom: 6px;
-  color: #333;
+  color: #a8b8c8;
 }
 
 .required {
   color: #c00;
 }
 
+.optional {
+  color: #8a9bb0;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
 .form-group input,
 .form-group textarea {
-  font-family: 'Aptos', 'Calibri', 'Segoe UI', sans-serif;
+  font-family: 'Inter', 'Aptos', 'Calibri', 'Segoe UI', sans-serif;
   font-size: 0.95rem;
   padding: 10px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #2e4f6e;
   border-radius: 2px;
-  background-color: #fff;
-  color: #1a1a1a;
+  background-color: #1a3050;
+  color: #ffffe6;
   transition: border-color 0.2s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #555;
+  border-color: #a8c0d4;
 }
 
 .form-group textarea {
@@ -375,12 +386,12 @@ a {
 }
 
 .form-submit {
-  font-family: 'Aptos', 'Calibri', 'Segoe UI', sans-serif;
+  font-family: 'Inter', 'Aptos', 'Calibri', 'Segoe UI', sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
   padding: 12px 32px;
-  background-color: #1a1a1a;
-  color: #fff;
+  background-color: #ffffe6;
+  color: #0e1b2e;
   border: none;
   cursor: pointer;
   align-self: flex-start;
@@ -388,7 +399,7 @@ a {
 }
 
 .form-submit:hover {
-  background-color: #333;
+  background-color: #d4d8c4;
 }
 
 
@@ -402,7 +413,7 @@ a {
 
 .about-placeholder {
   font-size: 1rem;
-  color: #777;
+  color: #6a8aa8;
   font-style: italic;
 }
 
@@ -417,41 +428,208 @@ a {
 /* class4 — Footer text */
 .footer-text {
   font-size: 0.85rem;
-  color: #999;
+  color: #5a7a94;
 }
+
+
+/* ---------- HOME / CAD LANDING ---------- */
+
+.home-content {
+  /* CAD-landing local variables. The CAD stage now uses transparent PNGs so
+     the dark site background shows through. Ink is cream to match body text. */
+  --cad-bg: transparent;
+  --cad-ink: #ffffe6;
+  --cad-ink-dim: #a8b8c8;
+  --cad-accent: #d96526;
+  --cad-fade-fast: 150ms ease;
+  --cad-fade-med:  200ms ease;
+
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 32px 48px 80px;
+}
+
+.home-intro {
+  font-size: clamp(1rem, 0.9rem + 0.35vw, 1.2rem);
+  font-weight: 300;
+  line-height: 1.55;
+  color: #d4d8c4;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 28px;
+}
+
+/* ---- CAD stage (the layered-PNG canvas with SVG callouts on top) ---- */
+.cad-stage {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  /* Visible canvas is 5076 × 1500 (SVG viewBox). PNG source is 5076 × 1928 and
+     gets visually cropped on the bottom via object-fit:cover below. */
+  aspect-ratio: 5076 / 1500;
+  background-color: var(--cad-bg);
+}
+
+.cad-stage img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* COVER fills container; the natural PNG height (1928) exceeds the container
+     height (1500 at same width), so the bottom of the image is cropped.
+     object-position: top keeps the top aligned with the SVG viewBox. */
+  object-fit: cover;
+  object-position: top;
+  user-select: none; pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--cad-fade-fast);
+}
+.cad-stage img.layer-default { opacity: 1; }
+
+.cad-stage[data-state="about"]        img.layer-about,
+.cad-stage[data-state="portfolio"]    img.layer-portfolio,
+.cad-stage[data-state="contact"]      img.layer-contact,
+.cad-stage[data-state="visualcomms"]  img.layer-visualcomms,
+.cad-stage[data-state="userenable"]   img.layer-userenable,
+.cad-stage[data-state="qualcomp"]     img.layer-qualcomp,
+.cad-stage[data-state="singsource"]   img.layer-singsource,
+.cad-stage[data-state="procdev"]      img.layer-procdev { opacity: 1; }
+.cad-stage:not([data-state="default"]) img.layer-default { opacity: 0; }
+
+/* ---- SVG callout overlay ---- */
+.cad-overlay {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  overflow: visible;
+}
+
+.hotzone { fill: rgba(0,0,0,0); cursor: pointer; }
+
+.callout text {
+  font-family: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
+  fill: var(--cad-ink);
+  transition: fill var(--cad-fade-fast), opacity var(--cad-fade-med);
+  pointer-events: auto;
+}
+.callout .label-num  { font-size: 40px; font-weight: 600; letter-spacing: 0.06em; }
+.callout .label-name { font-size: 48px; letter-spacing: 0.04em; }
+.callout .label-desc { font-size: 30px; fill: var(--cad-ink-dim); letter-spacing: 0.02em; }
+.callout .leader {
+  stroke: var(--cad-ink); stroke-width: 3; fill: none;
+  transition: stroke var(--cad-fade-fast), opacity var(--cad-fade-med);
+  pointer-events: none;
+}
+.callout .leader-hit {
+  stroke: rgba(0,0,0,0); stroke-width: 12; fill: none;
+  pointer-events: stroke;
+}
+.callout .dot {
+  fill: var(--cad-ink);
+  transition: fill var(--cad-fade-fast);
+  pointer-events: auto;
+}
+
+.main-callout { transition: opacity var(--cad-fade-med); }
+.sub-callout  { opacity: 0; pointer-events: none; transition: opacity var(--cad-fade-med); }
+
+.cad-stage[data-group="portfolio"] .sub-callout { opacity: 1; pointer-events: auto; }
+.cad-stage[data-group="portfolio"] .main-callout:not(.callout-portfolio) { opacity: 0.30; }
+.cad-stage[data-state="about"]   .main-callout:not(.callout-about)   { opacity: 0.30; }
+.cad-stage[data-state="contact"] .main-callout:not(.callout-contact) { opacity: 0.30; }
+
+.cad-stage[data-state="about"]        .callout-about        text,
+.cad-stage[data-state="contact"]      .callout-contact      text,
+.cad-stage[data-state="portfolio"]    .callout-portfolio    text,
+.cad-stage[data-state="visualcomms"]  .callout-visualcomms  text,
+.cad-stage[data-state="userenable"]   .callout-userenable   text,
+.cad-stage[data-state="qualcomp"]     .callout-qualcomp     text,
+.cad-stage[data-state="singsource"]   .callout-singsource   text,
+.cad-stage[data-state="procdev"]      .callout-procdev      text { fill: var(--cad-accent); }
+
+.cad-stage[data-state="about"]        .callout-about        .leader,
+.cad-stage[data-state="contact"]      .callout-contact      .leader,
+.cad-stage[data-state="portfolio"]    .callout-portfolio    .leader,
+.cad-stage[data-state="visualcomms"]  .callout-visualcomms  .leader,
+.cad-stage[data-state="userenable"]   .callout-userenable   .leader,
+.cad-stage[data-state="qualcomp"]     .callout-qualcomp     .leader,
+.cad-stage[data-state="singsource"]   .callout-singsource   .leader,
+.cad-stage[data-state="procdev"]      .callout-procdev      .leader { stroke: var(--cad-accent); }
+
+.cad-stage[data-state="about"]        .callout-about        .dot,
+.cad-stage[data-state="contact"]      .callout-contact      .dot,
+.cad-stage[data-state="portfolio"]    .callout-portfolio    .dot,
+.cad-stage[data-state="visualcomms"]  .callout-visualcomms  .dot,
+.cad-stage[data-state="userenable"]   .callout-userenable   .dot,
+.cad-stage[data-state="qualcomp"]     .callout-qualcomp     .dot,
+.cad-stage[data-state="singsource"]   .callout-singsource   .dot,
+.cad-stage[data-state="procdev"]      .callout-procdev      .dot { fill: var(--cad-accent); }
+
+
+/* ---------- HOME MOBILE NAV (fallback for landing on small screens) ---------- */
+
+/* Hidden on desktop — CAD stage handles navigation there. */
+.home-mobile-nav { display: none; }
 
 
 /* ---------- RESPONSIVE ---------- */
 
 @media (max-width: 768px) {
 
+  /* --- Header --- */
   .site-header {
     flex-direction: column;
     align-items: flex-start;
-    padding: 16px 24px 12px;
-    gap: 12px;
+    padding: 14px 20px 10px;
+    gap: 8px;
+  }
+
+  .name {
+    font-size: 1.7rem;
+  }
+
+  .title {
+    font-size: 0.95rem;
   }
 
   .header-nav {
-    gap: 16px;
+    gap: 4px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* Bigger tap targets, no border boxes squeezed against the screen edge */
+  .nav-link {
+    font-size: 0.95rem;
+    padding: 8px 10px;
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
   }
 
   .header-rule {
-    margin: 0 24px;
-    top: 110px;
+    margin: 0 20px;
+    top: 96px;
   }
 
+  /* --- Portfolio page --- */
   .portfolio-content {
-    padding: 0 24px 60px;
+    padding: 0 20px 48px;
   }
 
   .portfolio-section {
-    padding: 40px 0;
+    padding: 32px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 20px;
+    text-align: left;
   }
 
   .section-body {
     flex-direction: column !important;
-    gap: 24px;
+    gap: 20px;
   }
 
   .section-media {
@@ -460,16 +638,109 @@ a {
     width: 100%;
   }
 
+  .section-body-text {
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+
+  /* Slightly squarer carousel/static aspect on phones — keeps wide spreads legible */
+  .carousel-track,
+  .static-image {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* --- Contact page --- */
   .form-row-half {
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
   }
 
   .contact-content {
-    padding: 32px 24px 60px;
+    padding: 28px 20px 48px;
   }
 
+  .contact-intro {
+    font-size: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 1rem;          /* >=16px prevents iOS auto-zoom on focus */
+    padding: 12px 12px;
+  }
+
+  .form-submit {
+    width: 100%;
+    padding: 14px 24px;
+    align-self: stretch;
+    font-size: 1rem;
+  }
+
+  /* --- About page --- */
   .about-content {
-    padding: 40px 24px 60px;
+    padding: 32px 20px 48px;
+  }
+
+  /* --- Landing page (CAD) — mobile fallback --- */
+  .home-content {
+    padding: 24px 20px 48px;
+  }
+
+  .home-intro,
+  .cad-stage {
+    display: none;             /* CAD stage is desktop-only by design */
+  }
+
+  .home-mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 420px;
+    margin: 24px auto 0;
+  }
+
+  .home-mobile-link {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 14px;
+    align-items: baseline;
+    padding: 16px 18px;
+    border: 1px solid #2e4f6e;
+    background-color: #142544;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .home-mobile-link:hover,
+  .home-mobile-link:focus {
+    border-color: #ffffe6;
+    background-color: #18305a;
+    outline: none;
+  }
+
+  .home-mobile-num {
+    grid-row: 1 / 3;
+    align-self: center;
+    font-family: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #d96526;
+    letter-spacing: 0.04em;
+  }
+
+  .home-mobile-label {
+    grid-column: 2;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #ffffe6;
+  }
+
+  .home-mobile-desc {
+    grid-column: 2;
+    font-size: 0.85rem;
+    color: #a8b8c8;
+    letter-spacing: 0.02em;
   }
 }

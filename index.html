@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brian Okum — Technical Writer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -11,206 +14,155 @@
 
   <!-- ========== STICKY HEADER ========== -->
   <header class="site-header">
-    <div class="header-left">
+    <a href="index.html" class="header-left" aria-label="Home">
       <h1 class="name">Brian Okum</h1>
       <p class="title">Technical Writer</p>
-    </div>
+    </a>
     <nav class="header-nav">
       <a href="about.html" class="nav-link">About</a>
-      <a href="index.html" class="nav-link active">Portfolio</a>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
       <a href="contact.html" class="nav-link">Contact</a>
     </nav>
   </header>
 
   <div class="header-rule"></div>
 
-  <main class="portfolio-content">
+  <main class="home-content">
 
-    <!-- ===== SECTION 1: VISUAL COMMUNICATION (image left, text right) ===== -->
-    <section class="portfolio-section">
-      <h2 class="section-heading">Visual Communication</h2>
-      <div class="section-body layout-img-left">
+    <!-- Mobile fallback: simple stacked navigation. Hidden on desktop. -->
+    <nav class="home-mobile-nav" aria-label="Site sections">
+      <a href="about.html" class="home-mobile-link">
+        <span class="home-mobile-num">01</span>
+        <span class="home-mobile-label">About</span>
+        <span class="home-mobile-desc">personal background</span>
+      </a>
+      <a href="portfolio.html" class="home-mobile-link">
+        <span class="home-mobile-num">02</span>
+        <span class="home-mobile-label">Portfolio</span>
+        <span class="home-mobile-desc">selected work</span>
+      </a>
+      <a href="contact.html" class="home-mobile-link">
+        <span class="home-mobile-num">03</span>
+        <span class="home-mobile-label">Contact</span>
+        <span class="home-mobile-desc">get in touch</span>
+      </a>
+    </nav>
 
-        <div class="section-media">
-          <div class="carousel" data-auto-slide="2660">
-            <div class="carousel-track">
-              <div class="carousel-slide active">
-                <a href="images/visual-comm-1.svg" target="_blank">
-                  <img src="images/visual-comm-1.svg" alt="CAD rendering in assembly instruction">
-                </a>
-              </div>
-              <div class="carousel-slide">
-                <a href="images/visual-comm-2.svg" target="_blank">
-                  <img src="images/visual-comm-2.svg" alt="Photo-sequenced procedure">
-                </a>
-              </div>
-              <div class="carousel-slide">
-                <a href="images/visual-comm-3.svg" target="_blank">
-                  <img src="images/visual-comm-3.svg" alt="Vector/Illustrator-based instructions">
-                </a>
-              </div>
-              <div class="carousel-slide">
-                <a href="images/visual-comm-4.svg" target="_blank">
-                  <img src="images/visual-comm-4.svg" alt="Process flow and diagram composite">
-                </a>
-              </div>
-            </div>
-            <div class="carousel-dots"></div>
-          </div>
-        </div>
+    <div class="cad-stage" data-state="default">
 
-        <div class="section-text">
-          <p class="section-tagline">The right visual aid for every audience</p>
-          <p class="section-body-text">
-            Placeholder — approximately 100 words of text will go here describing your 
-            approach to visual communication in technical documentation. This section 
-            will explain how you integrate CAD renderings, photography, vector 
-            illustrations, and process flow diagrams to create documentation that 
-            communicates complex assembly and manufacturing procedures with clarity. 
-            You will provide this text. It should convey your philosophy on when and why 
-            to use different visual formats depending on the audience, the complexity 
-            of the procedure, and the working environment where the documentation 
-            will be used.
-          </p>
-        </div>
+      <!-- Image layer stack — DEFAULT shows by default; others fade in on state change -->
+      <img class="layer-default"      src="images/exploded-view-DEFAULT.png"      alt="Exploded mechanical assembly representing the portfolio sections">
+      <img class="layer-about"        src="images/exploded-view-ABOUT.png"        alt="">
+      <img class="layer-portfolio"    src="images/exploded-view-PORTFOLIO.png"    alt="">
+      <img class="layer-contact"      src="images/exploded-view-CONTACT.png"      alt="">
+      <img class="layer-visualcomms"  src="images/exploded-view-VISUALCOMMS.png"  alt="">
+      <img class="layer-userenable"   src="images/exploded-view-USERENABLE.png"   alt="">
+      <img class="layer-qualcomp"     src="images/exploded-view-QUALCOMP.png"     alt="">
+      <img class="layer-singsource"   src="images/exploded-view-SINGSOURCE.png"   alt="">
+      <img class="layer-procdev"      src="images/exploded-view-PROCDEV.png"      alt="">
 
-      </div>
-    </section>
+      <svg class="cad-overlay" viewBox="0 0 5076 1500" preserveAspectRatio="xMidYMid meet">
 
-    <!-- ===== SECTION 2: USER ENABLEMENT STRATEGY (text left, image right) ===== -->
-    <section class="portfolio-section">
-      <h2 class="section-heading">User Enablement Strategy</h2>
-      <div class="section-body layout-img-right">
+        <!-- =================== HOT ZONES =================== -->
+        <!-- All positions recalibrated against the new 5076×1928 PNG export.
+             Parts shifted UP ~17px vs the previous export. -->
+        <polygon class="hotzone" data-target="about" points="300,605 1860,797 1860,947 300,755"/>
+        <rect    class="hotzone" data-target="portfolio" x="2173" y="802"  width="690"  height="275"/>
+        <rect    class="hotzone" data-target="contact"   x="3658" y="1012" width="750"  height="340"/>
+        <!-- Sub-callout hot zones: 5 bearings clustered between PORTFOLIO and CONTACT -->
+        <circle class="hotzone" data-target="visualcomms"  cx="2989" cy="816"  r="45"/>
+        <circle class="hotzone" data-target="userenable"   cx="2914" cy="960"  r="45"/>
+        <circle class="hotzone" data-target="qualcomp"     cx="3055" cy="883"  r="45"/>
+        <circle class="hotzone" data-target="singsource"   cx="2903" cy="1176" r="45"/>
+        <circle class="hotzone" data-target="procdev"      cx="2970" cy="1246" r="45"/>
 
-        <div class="section-text">
-          <p class="section-tagline">Making information accessible where it matters</p>
-          <p class="section-body-text">
-            Placeholder — approximately 100 words of text will go here describing your 
-            approach to user enablement. This section will explain how you design 
-            documentation strategies that make information accessible to different 
-            audiences — from shop floor operators to field service technicians to 
-            end users. You will provide this text. It should highlight quick reference 
-            cards, knowledge base articles, glossary sections, and SOP micro-content 
-            as tools you use to bridge the gap between comprehensive procedures and 
-            the practical, in-the-moment information needs of the people doing the work.
-          </p>
-        </div>
+        <!-- =================== MAIN CALLOUTS =================== -->
 
-        <div class="section-media">
-          <div class="carousel" data-auto-slide="2660">
-            <div class="carousel-track">
-              <div class="carousel-slide active">
-                <a href="images/user-enable-1.svg" target="_blank">
-                  <img src="images/user-enable-1.svg" alt="Quick reference card">
-                </a>
-              </div>
-              <div class="carousel-slide">
-                <a href="images/user-enable-2.svg" target="_blank">
-                  <img src="images/user-enable-2.svg" alt="Knowledge base article">
-                </a>
-              </div>
-              <div class="carousel-slide">
-                <a href="images/user-enable-3.svg" target="_blank">
-                  <img src="images/user-enable-3.svg" alt="SOP micro-content collage">
-                </a>
-              </div>
-            </div>
-            <div class="carousel-dots"></div>
-          </div>
-        </div>
+        <!-- 01 ABOUT → long shaft (left). Shifted right another 100u (was 420, now 520).
+             Dot anchor also moved right 100u to keep the leader proportional, and
+             lifted further off the shaft top to widen the visible gap. -->
+        <g class="callout main-callout callout-about" data-target="about">
+          <text class="label-num"  x="520" y="380">01</text>
+          <text class="label-name" x="520" y="445">ABOUT</text>
+          <text class="label-desc" x="520" y="488">personal background</text>
+          <path class="leader-hit" d="M720 445 L1000 445 L1000 620"/>
+          <path class="leader"     d="M720 445 L1000 445 L1000 620"/>
+          <circle class="dot" cx="1000" cy="620" r="10"/>
+        </g>
 
-      </div>
-    </section>
+        <!-- 02 PORTFOLIO → middle subassembly -->
+        <g class="callout main-callout callout-portfolio" data-target="portfolio">
+          <text class="label-num"  x="1950" y="380">02</text>
+          <text class="label-name" x="1950" y="445">PORTFOLIO</text>
+          <text class="label-desc" x="1950" y="488">selected work</text>
+          <path class="leader-hit" d="M2240 445 L2500 445 L2500 810"/>
+          <path class="leader"     d="M2240 445 L2500 445 L2500 810"/>
+          <circle class="dot" cx="2500" cy="810" r="10"/>
+        </g>
 
-    <!-- ===== SECTION 3: QUALITY AND COMPLIANCE (image left, text right) ===== -->
-    <section class="portfolio-section">
-      <h2 class="section-heading">Quality and Compliance</h2>
-      <div class="section-body layout-img-left">
+        <!-- 03 CONTACT → large cylinder on right.
+             Label and dot dropped further down so the dot sits CLEARLY below the
+             cylinder's visible shadow (which extends to y≈1353). Dot at y=1360
+             is just below that boundary, so the leader is no longer on the part. -->
+        <g class="callout main-callout callout-contact" data-target="contact">
+          <text class="label-num"  x="3300" y="1370">03</text>
+          <text class="label-name" x="3300" y="1435">CONTACT</text>
+          <text class="label-desc" x="3300" y="1478">get in touch</text>
+          <path class="leader-hit" d="M3610 1435 L4030 1435 L4030 1360"/>
+          <path class="leader"     d="M3610 1435 L4030 1435 L4030 1360"/>
+          <circle class="dot" cx="4030" cy="1360" r="10"/>
+        </g>
 
-        <div class="section-media">
-          <div class="static-image">
-            <a href="images/quality-compliance-1.svg" target="_blank">
-              <img src="images/quality-compliance-1.svg" alt="QMS document workflow and approval states">
-            </a>
-          </div>
-        </div>
+        <!-- =================== SUB-CALLOUTS (visible only in portfolio mode) =================== -->
 
-        <div class="section-text">
-          <p class="section-tagline">Built for regulated environments</p>
-          <p class="section-body-text">
-            Placeholder — approximately 100 words of text will go here describing your 
-            experience working within quality management systems and regulated 
-            environments. This section will explain how your documentation practice 
-            integrates with QMS workflows, approval states, and compliance 
-            requirements. You will provide this text. It should convey your familiarity 
-            with controlled document processes, audit readiness, and the role 
-            technical writing plays in maintaining quality standards across 
-            manufacturing operations.
-          </p>
-        </div>
+        <!-- 02.1 VISUAL COMMUNICATIONS → top bearing -->
+        <g class="callout sub-callout callout-visualcomms" data-target="visualcomms">
+          <text class="label-num"  x="3700" y="110">02.1</text>
+          <text class="label-name" x="3700" y="170">VISUAL COMMUNICATIONS</text>
+          <path class="leader-hit" d="M3675 170 L3350 170 L2989 816"/>
+          <path class="leader"     d="M3675 170 L3350 170 L2989 816"/>
+          <circle class="dot" cx="2989" cy="816" r="8"/>
+        </g>
 
-      </div>
-    </section>
+        <!-- 02.2 USER ENABLEMENT → middle bearing -->
+        <g class="callout sub-callout callout-userenable" data-target="userenable">
+          <text class="label-num"  x="3700" y="290">02.2</text>
+          <text class="label-name" x="3700" y="350">USER ENABLEMENT</text>
+          <path class="leader-hit" d="M3675 350 L3400 350 L2914 960"/>
+          <path class="leader"     d="M3675 350 L3400 350 L2914 960"/>
+          <circle class="dot" cx="2914" cy="960" r="8"/>
+        </g>
 
-    <!-- ===== SECTION 4: CONTENT REUSE & SINGLE-SOURCING (text left, image right) ===== -->
-    <section class="portfolio-section">
-      <h2 class="section-heading">Content Reuse &amp; Single-Sourcing</h2>
-      <div class="section-body layout-img-right">
+        <!-- 02.3 QUALITY & COMPLIANCE → upper-right bearing -->
+        <g class="callout sub-callout callout-qualcomp" data-target="qualcomp">
+          <text class="label-num"  x="3700" y="470">02.3</text>
+          <text class="label-name" x="3700" y="530">QUALITY &amp; COMPLIANCE</text>
+          <path class="leader-hit" d="M3675 530 L3400 530 L3055 883"/>
+          <path class="leader"     d="M3675 530 L3400 530 L3055 883"/>
+          <circle class="dot" cx="3055" cy="883" r="8"/>
+        </g>
 
-        <div class="section-text">
-          <p class="section-tagline">Write once, publish everywhere</p>
-          <p class="section-body-text">
-            Placeholder — approximately 100 words of text will go here describing your 
-            approach to content reuse and single-sourcing. This section will explain 
-            how you design documentation architectures where content is authored once 
-            and published to multiple output formats — reducing duplication, preventing 
-            version drift, and saving time. You will provide this text. It should 
-            illustrate the concept of multi-channel authoring and how a single source 
-            of truth can flow into SOPs, training materials, quick reference cards, 
-            and digital knowledge bases without redundant effort.
-          </p>
-        </div>
+        <!-- 02.4 SINGLE-SOURCING → lower-left bearing. Lifted higher so the gap
+             between 02.4 name and 02.5 num matches the 120u spacing used by 02.1-02.3. -->
+        <g class="callout sub-callout callout-singsource" data-target="singsource">
+          <text class="label-num"  x="1700" y="1230">02.4</text>
+          <text class="label-name" x="1700" y="1290">SINGLE-SOURCING</text>
+          <path class="leader-hit" d="M2360 1290 L2600 1290 L2903 1176"/>
+          <path class="leader"     d="M2360 1290 L2600 1290 L2903 1176"/>
+          <circle class="dot" cx="2903" cy="1176" r="8"/>
+        </g>
 
-        <div class="section-media">
-          <div class="static-image">
-            <a href="images/content-reuse-1.svg" target="_blank">
-              <img src="images/content-reuse-1.svg" alt="Infographic showing single-source to multiple output formats">
-            </a>
-          </div>
-        </div>
+        <!-- 02.5 PROCESS DEVELOPMENT → bottom bearing. Sits 120u below 02.4 (matches 02.1-02.3 spacing). -->
+        <g class="callout sub-callout callout-procdev" data-target="procdev">
+          <text class="label-num"  x="1700" y="1410">02.5</text>
+          <text class="label-name" x="1700" y="1470">PROCESS DEVELOPMENT</text>
+          <path class="leader-hit" d="M2475 1470 L2750 1470 L2970 1246"/>
+          <path class="leader"     d="M2475 1470 L2750 1470 L2970 1246"/>
+          <circle class="dot" cx="2970" cy="1246" r="8"/>
+        </g>
 
-      </div>
-    </section>
-
-    <!-- ===== SECTION 5: PROCESS DEVELOPMENT (image left, text right) ===== -->
-    <section class="portfolio-section">
-      <h2 class="section-heading">Process Development</h2>
-      <div class="section-body layout-img-left">
-
-        <div class="section-media">
-          <div class="static-image">
-            <a href="images/process-dev-1.svg" target="_blank">
-              <img src="images/process-dev-1.svg" alt="Documentation architecture and numbering scheme">
-            </a>
-          </div>
-        </div>
-
-        <div class="section-text">
-          <p class="section-tagline">Building documentation programs from the ground up</p>
-          <p class="section-body-text">
-            Placeholder — approximately 100 words of text will go here describing your 
-            experience building documentation programs and processes where none 
-            previously existed. This section will explain how you establish document 
-            numbering systems, organizational schemes, review and approval workflows, 
-            and documentation architectures. You will provide this text. It should 
-            convey your ability to stand up a full documentation function — not just 
-            write individual documents, but design the infrastructure that makes 
-            documentation sustainable and scalable as a company grows.
-          </p>
-        </div>
-
-      </div>
-    </section>
+      </svg>
+    </div>
 
   </main>
 

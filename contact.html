@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Brian Okum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -11,13 +14,13 @@
 
   <!-- ========== STICKY HEADER ========== -->
   <header class="site-header">
-    <div class="header-left">
+    <a href="index.html" class="header-left" aria-label="Home">
       <h1 class="name">Brian Okum</h1>
       <p class="title">Technical Writer</p>
-    </div>
+    </a>
     <nav class="header-nav">
       <a href="about.html" class="nav-link">About</a>
-      <a href="index.html" class="nav-link">Portfolio</a>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
       <a href="contact.html" class="nav-link active">Contact</a>
     </nav>
   </header>
@@ -27,9 +30,7 @@
   <main class="contact-content">
 
     <p class="contact-intro">
-      If you are interested in hiring me for a professional project and would like 
-      to reach out to discuss your project and my rate, please complete the form 
-      below and I will get back to you as soon as I can.
+      Reach out with the form below. I&rsquo;d love to learn about your business needs and how I can help. If it&rsquo;s about skiing, running, or environmentalism&hellip; feel free to reach out about that too!
     </p>
 
     <!-- 
@@ -41,29 +42,29 @@
       
       Example: action="https://formspree.io/f/xpzvnqkl"
     -->
-    <form 
-      class="contact-form" 
-      action="https://formspree.io/f/YOUR_FORM_ID" 
+    <form
+      class="contact-form"
+      action="https://formspree.io/f/mkolgayr"
       method="POST"
     >
       <div class="form-row form-row-half">
         <div class="form-group">
-          <label for="first-name">First Name <span class="required">*</span></label>
-          <input type="text" id="first-name" name="first-name" required>
+          <label for="name">Name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" required>
         </div>
         <div class="form-group">
-          <label for="last-name">Last Name <span class="required">*</span></label>
-          <input type="text" id="last-name" name="last-name" required>
+          <label for="company">Company <span class="optional">(optional)</span></label>
+          <input type="text" id="company" name="company">
         </div>
       </div>
 
       <div class="form-row form-row-half">
         <div class="form-group">
-          <label for="company">Company</label>
-          <input type="text" id="company" name="company">
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required>
         </div>
         <div class="form-group">
-          <label for="phone">Phone Number</label>
+          <label for="phone">Phone Number <span class="optional">(optional)</span></label>
           <input type="tel" id="phone" name="phone">
         </div>
       </div>
