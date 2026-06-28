@@ -131,29 +131,37 @@ a {
 }
 
 .portfolio-section {
-  padding: 64px 0;
+  padding: 110px 0;
 }
 
 .portfolio-section + .portfolio-section {
   border-top: none;
 }
 
-/* class3 — Section headings */
+/* class3 — Section headings.
+   Now lives INSIDE .section-text (not above the section), centered above the
+   body copy and shrunk ~15% from the original. A negative margin-top lifts the
+   heading so its top edge sits above the image frame's top edge while its
+   bottom edge crosses below — a partial-overlap "callout" effect. */
 .section-heading {
-  font-size: clamp(1.8rem, 1.35rem + 1.35vw, 2.7rem);
+  font-size: clamp(1.53rem, 1.1475rem + 1.1475vw, 2.295rem);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.01em;
   word-spacing: 0.1em;
-  margin-bottom: 32px;
+  margin-top: -28px;
+  margin-bottom: 18px;
   text-align: center;
 }
 
-/* Section body: two-column layout */
+/* Section body: two-column layout.
+   flex-start (was center) so image and text columns share a top edge; the
+   negative margin-top on .section-heading is what produces the partial-overlap
+   relative to the image's top. */
 .section-body {
   display: flex;
   gap: 80px;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .section-body.layout-img-left {
@@ -446,7 +454,10 @@ a {
 
   max-width: 1920px;
   margin: 0 auto;
-  padding: 32px 48px 80px;
+  /* Bottom padding pushes the footer 300px further below the CAD stage on the
+     landing page (was 80px). Scoped to .home-content so other pages keep their
+     original spacing. */
+  padding: 32px 48px 380px;
 }
 
 .home-intro {
@@ -623,6 +634,7 @@ a {
   }
 
   .section-heading {
+    margin-top: 0;          /* no overlap-lift on mobile (image stacks above text) */
     margin-bottom: 20px;
     text-align: left;
   }
