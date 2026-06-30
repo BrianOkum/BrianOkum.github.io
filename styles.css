@@ -111,6 +111,35 @@ a {
   border: 1.5px solid #ffffe6;
 }
 
+/* LinkedIn icon — sized to match the visible hover box of .nav-link.
+   nav-link box height ≈ font-size 1rem × line-height 1.6 (≈25.6px) +
+   8px vertical padding + 3px border ≈ 36-37px. The icon's height matches
+   that visible box; surrounding link gets a slim padding/border so its
+   own hover state aligns with the text links above. */
+.nav-linkedin {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border: 1.5px solid transparent;
+  transition: opacity 0.2s ease;
+  line-height: 0; /* prevent extra space below the img baseline */
+}
+
+.nav-linkedin:hover {
+  opacity: 0.78;
+}
+
+.nav-linkedin:focus-visible {
+  outline: 1.5px solid #ffffe6;
+  outline-offset: 4px;
+}
+
+.nav-linkedin img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
 /* Horizontal rule under header */
 .header-rule {
   position: sticky;
@@ -132,6 +161,10 @@ a {
 
 .portfolio-section {
   padding: 110px 0;
+  /* Sticky header (~88px) + horizontal rule (3px) covers ~91px of viewport top.
+     Pushing scroll target down by 100px clears the header AND the negative-
+     margin lifted .section-heading inside this section. */
+  scroll-margin-top: 100px;
 }
 
 .portfolio-section + .portfolio-section {
@@ -413,10 +446,51 @@ a {
 
 /* ---------- ABOUT PAGE ---------- */
 
+/* About layout — three-column grid: portrait | text (800px) | matching spacer.
+   The 1fr side columns stay equal in width, so the centered text column never
+   shifts horizontally. The portrait is centered within the left 1fr column. */
 .about-content {
-  max-width: 800px;
+  max-width: 1920px;
   margin: 0 auto;
   padding: 64px 48px 80px;
+  display: grid;
+  grid-template-columns: 1fr min(800px, 100%) 1fr;
+  column-gap: 40px;  /* minimum buffer between portrait and text */
+  align-items: start;
+}
+
+.about-portrait-col {
+  grid-column: 1;
+  justify-self: center;
+  align-self: start;
+}
+
+.about-portrait {
+  width: 250px;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
+
+.about-text {
+  grid-column: 2;
+}
+
+.about-content .section-body-text {
+  text-align: justify;
+}
+
+/* Below ~1200px there isn't enough horizontal space to honor the 40px buffer
+   between portrait and text — stack portrait above text instead. */
+@media (max-width: 1200px) {
+  .about-content {
+    display: block;
+    max-width: 800px;
+  }
+  .about-portrait-col {
+    justify-self: start;
+    margin-bottom: 24px;
+  }
 }
 
 .about-placeholder {
@@ -468,6 +542,30 @@ a {
   text-align: center;
   max-width: 720px;
   margin: 0 auto 28px;
+}
+
+/* Work-instruction-style header sitting above the CAD stage on the landing
+   page. Mono typography matches the SVG callout labels so the page reads as
+   one cohesive document. */
+.home-instructions {
+  font-family: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
+  color: var(--cad-ink);
+  margin: 50px 0 28px;
+  padding: 0;
+}
+
+.home-instructions-h1 {
+  font-size: clamp(1.3rem, 1rem + 0.9vw, 1.9rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.home-instructions-h2 {
+  font-size: clamp(1rem, 0.85rem + 0.5vw, 1.35rem);
+  font-weight: 400;
+  margin-top: 8px;
+  color: var(--cad-ink-dim);
+  letter-spacing: 0.02em;
 }
 
 /* ---- CAD stage (the layered-PNG canvas with SVG callouts on top) ---- */
@@ -524,9 +622,9 @@ a {
   transition: fill var(--cad-fade-fast), opacity var(--cad-fade-med);
   pointer-events: auto;
 }
-.callout .label-num  { font-size: 40px; font-weight: 600; letter-spacing: 0.06em; }
-.callout .label-name { font-size: 48px; letter-spacing: 0.04em; }
-.callout .label-desc { font-size: 30px; fill: var(--cad-ink-dim); letter-spacing: 0.02em; }
+.callout .label-num  { font-size: 60px; font-weight: 600; letter-spacing: 0.06em; }
+.callout .label-name { font-size: 72px; letter-spacing: 0.04em; }
+.callout .label-desc { font-size: 46px; fill: var(--cad-ink-dim); letter-spacing: 0.02em; }
 .callout .leader {
   stroke: var(--cad-ink); stroke-width: 3; fill: none;
   transition: stroke var(--cad-fade-fast), opacity var(--cad-fade-med);

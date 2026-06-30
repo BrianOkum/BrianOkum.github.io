@@ -22,12 +22,22 @@
       <a href="about.html" class="nav-link">About</a>
       <a href="portfolio.html" class="nav-link">Portfolio</a>
       <a href="contact.html" class="nav-link">Contact</a>
+      <a href="https://linkedin.com/in/brian-okum" class="nav-linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="images/linkedin.png" alt="">
+      </a>
     </nav>
   </header>
 
   <div class="header-rule"></div>
 
   <main class="home-content">
+
+    <!-- Work-instruction-style header above the CAD. Frames the landing page
+         as section "1 Instructions" with step 1.1 directing the visitor. -->
+    <div class="home-instructions" aria-hidden="false">
+      <p class="home-instructions-h1">1 Instructions</p>
+      <p class="home-instructions-h2">1.1 Select a part below to navigate the site</p>
+    </div>
 
     <!-- Mobile fallback: simple stacked navigation. Hidden on desktop. -->
     <nav class="home-mobile-nav" aria-label="Site sections">
@@ -78,38 +88,41 @@
 
         <!-- =================== MAIN CALLOUTS =================== -->
 
-        <!-- 01 ABOUT → long shaft (left). Shifted right another 100u (was 420, now 520).
-             Dot anchor also moved right 100u to keep the leader proportional, and
-             lifted further off the shaft top to widen the visible gap. -->
+        <!-- 01 ABOUT → long shaft (left). Text slid LEFT to x=200 so the wider
+             "personal background" desc (≈524px at 46px font) clears the vertical
+             leader at x=1000. Dot stays anchored to the shaft. -->
         <g class="callout main-callout callout-about" data-target="about">
-          <text class="label-num"  x="520" y="380">01</text>
-          <text class="label-name" x="520" y="445">ABOUT</text>
-          <text class="label-desc" x="520" y="488">personal background</text>
-          <path class="leader-hit" d="M720 445 L1000 445 L1000 620"/>
-          <path class="leader"     d="M720 445 L1000 445 L1000 620"/>
+          <text class="label-num"  x="200" y="380">01</text>
+          <text class="label-name" x="200" y="445">ABOUT</text>
+          <text class="label-desc" x="200" y="488">personal background</text>
+          <path class="leader-hit" d="M750 445 L1000 445 L1000 620"/>
+          <path class="leader"     d="M750 445 L1000 445 L1000 620"/>
           <circle class="dot" cx="1000" cy="620" r="10"/>
         </g>
 
-        <!-- 02 PORTFOLIO → middle subassembly -->
+        <!-- 02 PORTFOLIO → middle subassembly. Leader start pushed to x=2380
+             (was 2240) to clear "PORTFOLIO" at 72px (~389px wide). -->
         <g class="callout main-callout callout-portfolio" data-target="portfolio">
           <text class="label-num"  x="1950" y="380">02</text>
           <text class="label-name" x="1950" y="445">PORTFOLIO</text>
           <text class="label-desc" x="1950" y="488">selected work</text>
-          <path class="leader-hit" d="M2240 445 L2500 445 L2500 810"/>
-          <path class="leader"     d="M2240 445 L2500 445 L2500 810"/>
+          <path class="leader-hit" d="M2380 445 L2500 445 L2500 810"/>
+          <path class="leader"     d="M2380 445 L2500 445 L2500 810"/>
           <circle class="dot" cx="2500" cy="810" r="10"/>
         </g>
 
         <!-- 03 CONTACT → large cylinder on right.
              Label and dot dropped further down so the dot sits CLEARLY below the
              cylinder's visible shadow (which extends to y≈1353). Dot at y=1360
-             is just below that boundary, so the leader is no longer on the part. -->
+             is just below that boundary, so the leader is no longer on the part.
+             Leader start pushed to x=3640 (was 3610) for breathing room after
+             "CONTACT" at 72px. -->
         <g class="callout main-callout callout-contact" data-target="contact">
           <text class="label-num"  x="3300" y="1370">03</text>
           <text class="label-name" x="3300" y="1435">CONTACT</text>
           <text class="label-desc" x="3300" y="1478">get in touch</text>
-          <path class="leader-hit" d="M3610 1435 L4030 1435 L4030 1360"/>
-          <path class="leader"     d="M3610 1435 L4030 1435 L4030 1360"/>
+          <path class="leader-hit" d="M3640 1435 L4030 1435 L4030 1360"/>
+          <path class="leader"     d="M3640 1435 L4030 1435 L4030 1360"/>
           <circle class="dot" cx="4030" cy="1360" r="10"/>
         </g>
 
@@ -143,21 +156,23 @@
         </g>
 
         <!-- 02.4 SINGLE-SOURCING → lower-left bearing. Lifted higher so the gap
-             between 02.4 name and 02.5 num matches the 120u spacing used by 02.1-02.3. -->
+             between 02.4 name and 02.5 num matches the 120u spacing used by 02.1-02.3.
+             Leader start pushed to x=2390 (was 2360) to clear "SINGLE-SOURCING" (~648px). -->
         <g class="callout sub-callout callout-singsource" data-target="singsource">
           <text class="label-num"  x="1700" y="1230">02.4</text>
           <text class="label-name" x="1700" y="1290">SINGLE-SOURCING</text>
-          <path class="leader-hit" d="M2360 1290 L2600 1290 L2903 1176"/>
-          <path class="leader"     d="M2360 1290 L2600 1290 L2903 1176"/>
+          <path class="leader-hit" d="M2390 1290 L2600 1290 L2903 1176"/>
+          <path class="leader"     d="M2390 1290 L2600 1290 L2903 1176"/>
           <circle class="dot" cx="2903" cy="1176" r="8"/>
         </g>
 
-        <!-- 02.5 PROCESS DEVELOPMENT → bottom bearing. Sits 120u below 02.4 (matches 02.1-02.3 spacing). -->
+        <!-- 02.5 PROCESS DEVELOPMENT → bottom bearing. Sits 120u below 02.4 (matches 02.1-02.3 spacing).
+             Leader start pushed to x=2560 (was 2475) to clear "PROCESS DEVELOPMENT" (~821px). -->
         <g class="callout sub-callout callout-procdev" data-target="procdev">
           <text class="label-num"  x="1700" y="1410">02.5</text>
           <text class="label-name" x="1700" y="1470">PROCESS DEVELOPMENT</text>
-          <path class="leader-hit" d="M2475 1470 L2750 1470 L2970 1246"/>
-          <path class="leader"     d="M2475 1470 L2750 1470 L2970 1246"/>
+          <path class="leader-hit" d="M2560 1470 L2750 1470 L2970 1246"/>
+          <path class="leader"     d="M2560 1470 L2750 1470 L2970 1246"/>
           <circle class="dot" cx="2970" cy="1246" r="8"/>
         </g>
 
