@@ -6,38 +6,29 @@
   <title>Brian Okum — Technical Writer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 
   <!-- ========== STICKY HEADER ========== -->
-  <header class="site-header">
+  <header class="site-header home-header">
+    <!-- Balancing spacer (matches LinkedIn icon width) so the name block sits
+         dead-center on the page while the icon hangs to its right. -->
+    <span class="home-header-spacer" aria-hidden="true"></span>
     <a href="index.html" class="header-left" aria-label="Home">
       <h1 class="name">Brian Okum</h1>
       <p class="title">Technical Writer</p>
     </a>
-    <nav class="header-nav">
-      <a href="about.html" class="nav-link">About</a>
-      <a href="portfolio.html" class="nav-link">Portfolio</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-      <a href="https://linkedin.com/in/brian-okum" class="nav-linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <img src="images/linkedin.png" alt="">
-      </a>
-    </nav>
+    <a href="https://linkedin.com/in/brian-okum" class="nav-linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <img src="images/linkedin.png" alt="">
+    </a>
   </header>
 
   <div class="header-rule"></div>
 
   <main class="home-content">
-
-    <!-- Work-instruction-style header above the CAD. Frames the landing page
-         as section "1 Instructions" with step 1.1 directing the visitor. -->
-    <div class="home-instructions" aria-hidden="false">
-      <p class="home-instructions-h1">1 Instructions</p>
-      <p class="home-instructions-h2">1.1 Select a part below to navigate the site</p>
-    </div>
 
     <!-- Mobile fallback: simple stacked navigation. Hidden on desktop. -->
     <nav class="home-mobile-nav" aria-label="Site sections">
@@ -65,6 +56,7 @@
       <img class="layer-about"        src="images/exploded-view-ABOUT.png"        alt="">
       <img class="layer-portfolio"    src="images/exploded-view-PORTFOLIO.png"    alt="">
       <img class="layer-contact"      src="images/exploded-view-CONTACT.png"      alt="">
+      <img class="layer-insights"     src="images/exploded-view-INSIGHTS.png"     alt="">
       <img class="layer-visualcomms"  src="images/exploded-view-VISUALCOMMS.png"  alt="">
       <img class="layer-userenable"   src="images/exploded-view-USERENABLE.png"   alt="">
       <img class="layer-qualcomp"     src="images/exploded-view-QUALCOMP.png"     alt="">
@@ -78,6 +70,7 @@
              Parts shifted UP ~17px vs the previous export. -->
         <polygon class="hotzone" data-target="about" points="300,605 1860,797 1860,947 300,755"/>
         <rect    class="hotzone" data-target="portfolio" x="2173" y="802"  width="690"  height="275"/>
+        <rect    class="hotzone" data-target="insights"  x="3050" y="945"  width="555"  height="263"/>
         <rect    class="hotzone" data-target="contact"   x="3658" y="1012" width="750"  height="340"/>
         <!-- Sub-callout hot zones: 5 bearings clustered between PORTFOLIO and CONTACT -->
         <circle class="hotzone" data-target="visualcomms"  cx="2989" cy="816"  r="45"/>
@@ -111,14 +104,28 @@
           <circle class="dot" cx="2500" cy="810" r="10"/>
         </g>
 
-        <!-- 03 CONTACT → large cylinder on right.
+        <!-- 03 INSIGHTS → orange cylinder body (right of the bearing cluster,
+             left of the CONTACT connector; highlighted part spans x3043-3605,
+             y941-1208). Text sits in the right column, well below 02.3 QUALITY &
+             COMPLIANCE (y530) so neither text nor leader crowds it. Leader runs
+             left from the label, then drops onto the cylinder body. -->
+        <g class="callout main-callout callout-insights" data-target="insights">
+          <text class="label-num"  x="3700" y="805">03</text>
+          <text class="label-name" x="3700" y="870">INSIGHTS</text>
+          <text class="label-desc" x="3700" y="913">articles &amp; ideas</text>
+          <path class="leader-hit" d="M3675 870 L3350 870 L3350 920"/>
+          <path class="leader"     d="M3675 870 L3350 870 L3350 920"/>
+          <circle class="dot" cx="3350" cy="920" r="10"/>
+        </g>
+
+        <!-- 04 CONTACT → large cylinder on right.
              Label and dot dropped further down so the dot sits CLEARLY below the
              cylinder's visible shadow (which extends to y≈1353). Dot at y=1360
              is just below that boundary, so the leader is no longer on the part.
              Leader start pushed to x=3640 (was 3610) for breathing room after
              "CONTACT" at 72px. -->
         <g class="callout main-callout callout-contact" data-target="contact">
-          <text class="label-num"  x="3300" y="1370">03</text>
+          <text class="label-num"  x="3300" y="1370">04</text>
           <text class="label-name" x="3300" y="1435">CONTACT</text>
           <text class="label-desc" x="3300" y="1478">get in touch</text>
           <path class="leader-hit" d="M3640 1435 L4030 1435 L4030 1360"/>

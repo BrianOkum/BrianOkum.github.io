@@ -28,6 +28,7 @@ function initCadLanding() {
   const NAV = {
     about:       'about.html',
     portfolio:   'portfolio.html',
+    insights:    'insights.html',
     contact:     'contact.html',
     visualcomms: 'portfolio.html#visual-communication',
     userenable:  'portfolio.html#user-enablement',
