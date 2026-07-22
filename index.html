@@ -37,13 +37,18 @@
         <span class="home-mobile-label">About</span>
         <span class="home-mobile-desc">personal background</span>
       </a>
-      <a href="portfolio.html" class="home-mobile-link">
+      <a href="Brian-Okum-Resume.pdf" target="_blank" rel="noopener" class="home-mobile-link">
         <span class="home-mobile-num">02</span>
+        <span class="home-mobile-label">Resume</span>
+        <span class="home-mobile-desc">view / download PDF</span>
+      </a>
+      <a href="portfolio.html" class="home-mobile-link">
+        <span class="home-mobile-num">03</span>
         <span class="home-mobile-label">Portfolio</span>
         <span class="home-mobile-desc">selected work</span>
       </a>
       <a href="contact.html" class="home-mobile-link">
-        <span class="home-mobile-num">03</span>
+        <span class="home-mobile-num">04</span>
         <span class="home-mobile-label">Contact</span>
         <span class="home-mobile-desc">get in touch</span>
       </a>
@@ -62,6 +67,7 @@
       <img class="layer-qualcomp"     src="images/exploded-view-QUALCOMP.png"     alt="">
       <img class="layer-singsource"   src="images/exploded-view-SINGSOURCE.png"   alt="">
       <img class="layer-procdev"      src="images/exploded-view-PROCDEV.png"      alt="">
+      <img class="layer-resume"       src="images/exploded-view-RESUME.png"       alt="">
 
       <svg class="cad-overlay" viewBox="0 0 5076 1500" preserveAspectRatio="xMidYMid meet">
 
@@ -73,7 +79,7 @@
         <rect    class="hotzone" data-target="insights"  x="3050" y="945"  width="555"  height="263"/>
         <rect    class="hotzone" data-target="contact"   x="3658" y="1012" width="750"  height="340"/>
         <!-- RESUME hot zone: the collar/bearing part between the ABOUT shaft and the PORTFOLIO subassembly -->
-        <circle  class="hotzone" data-target="resume"    cx="1930" cy="795" r="170"/>
+        <circle  class="hotzone" data-target="resume"    cx="1930" cy="900" r="160"/>
         <!-- Sub-callout hot zones: 5 bearings clustered between PORTFOLIO and CONTACT -->
         <circle class="hotzone" data-target="visualcomms"  cx="2989" cy="816"  r="45"/>
         <circle class="hotzone" data-target="userenable"   cx="2914" cy="960"  r="45"/>
@@ -87,18 +93,18 @@
              "personal background" desc (≈524px at 46px font) clears the vertical
              leader at x=1000. Dot stays anchored to the shaft. -->
         <g class="callout main-callout callout-about" data-target="about">
-          <text class="label-num"  x="200" y="380">01</text>
-          <text class="label-name" x="200" y="445">ABOUT</text>
-          <text class="label-desc" x="200" y="488">personal background</text>
-          <path class="leader-hit" d="M750 445 L1000 445 L1000 620"/>
-          <path class="leader"     d="M750 445 L1000 445 L1000 620"/>
-          <circle class="dot" cx="1000" cy="620" r="10"/>
+          <text class="label-num"  x="304" y="328">01</text>
+          <text class="label-name" x="304" y="393">ABOUT</text>
+          <text class="label-desc" x="304" y="436">personal background</text>
+          <path class="leader-hit" d="M854 393 L1000 393 L1000 646"/>
+          <path class="leader"     d="M854 393 L1000 393 L1000 646"/>
+          <circle class="dot" cx="1000" cy="646" r="10"/>
         </g>
 
-        <!-- 02 PORTFOLIO → middle subassembly. Leader start pushed to x=2380
+        <!-- 03 PORTFOLIO → middle subassembly. Leader start pushed to x=2380
              (was 2240) to clear "PORTFOLIO" at 72px (~389px wide). -->
         <g class="callout main-callout callout-portfolio" data-target="portfolio">
-          <text class="label-num"  x="1950" y="380">02</text>
+          <text class="label-num"  x="1950" y="380">03</text>
           <text class="label-name" x="1950" y="445">PORTFOLIO</text>
           <text class="label-desc" x="1950" y="488">selected work</text>
           <path class="leader-hit" d="M2380 445 L2500 445 L2500 810"/>
@@ -106,95 +112,97 @@
           <circle class="dot" cx="2500" cy="810" r="10"/>
         </g>
 
-        <!-- 03 INSIGHTS → orange cylinder body (right of the bearing cluster,
+        <!-- 04 INSIGHTS → orange cylinder body (right of the bearing cluster,
              left of the CONTACT connector; highlighted part spans x3043-3605,
-             y941-1208). Text sits in the right column, well below 02.3 QUALITY &
+             y941-1208). Text sits in the right column, well below 03.3 QUALITY &
              COMPLIANCE (y530) so neither text nor leader crowds it. Leader runs
              left from the label, then drops onto the cylinder body. -->
         <g class="callout main-callout callout-insights" data-target="insights">
-          <text class="label-num"  x="3700" y="805">03</text>
-          <text class="label-name" x="3700" y="870">INSIGHTS</text>
-          <text class="label-desc" x="3700" y="913">articles &amp; ideas</text>
-          <path class="leader-hit" d="M3675 870 L3350 870 L3350 920"/>
-          <path class="leader"     d="M3675 870 L3350 870 L3350 920"/>
+          <text class="label-num"  x="3700" y="753">04</text>
+          <text class="label-name" x="3700" y="818">INSIGHTS</text>
+          <text class="label-desc" x="3700" y="861">articles &amp; ideas</text>
+          <path class="leader-hit" d="M3675 818 L3350 810 L3350 920"/>
+          <path class="leader"     d="M3675 818 L3350 810 L3350 920"/>
           <circle class="dot" cx="3350" cy="920" r="10"/>
         </g>
 
-        <!-- 04 CONTACT → large cylinder on right.
+        <!-- 05 CONTACT → large cylinder on right.
              Label and dot dropped further down so the dot sits CLEARLY below the
              cylinder's visible shadow (which extends to y≈1353). Dot at y=1360
              is just below that boundary, so the leader is no longer on the part.
              Leader start pushed to x=3640 (was 3610) for breathing room after
              "CONTACT" at 72px. -->
         <g class="callout main-callout callout-contact" data-target="contact">
-          <text class="label-num"  x="3300" y="1370">04</text>
-          <text class="label-name" x="3300" y="1435">CONTACT</text>
-          <text class="label-desc" x="3300" y="1478">get in touch</text>
-          <path class="leader-hit" d="M3640 1435 L4030 1435 L4030 1360"/>
-          <path class="leader"     d="M3640 1435 L4030 1435 L4030 1360"/>
+          <text class="label-num"  x="3300" y="1458">05</text>
+          <text class="label-name" x="3300" y="1523">CONTACT</text>
+          <text class="label-desc" x="3300" y="1566">get in touch</text>
+          <path class="leader-hit" d="M3640 1523 L4030 1523 L4030 1360"/>
+          <path class="leader"     d="M3640 1523 L4030 1523 L4030 1360"/>
           <circle class="dot" cx="4030" cy="1360" r="10"/>
         </g>
 
         <!-- RESUME → collar between the ABOUT shaft and the PORTFOLIO subassembly.
              Clicking the part or this callout opens the resume PDF in a new tab.
              The PDF (not the page HTML) carries phone/contact details, keeping them
-             out of scrape-able page markup. Label sits in the open lower-left space;
-             leader runs right then up onto the collar. -->
+             out of scrape-able page markup. Text sits lower-left; the leader runs
+             right, then up to a dot that sits just BELOW the collar (so the leader
+             stops under the part instead of crossing over it). -->
         <g class="callout main-callout callout-resume" data-target="resume">
-          <text class="label-name" x="1000" y="1200">RESUME</text>
-          <text class="label-desc" x="1000" y="1258">view / download (PDF)</text>
-          <path class="leader-hit" d="M1600 1200 L1930 1200 L1930 795"/>
-          <path class="leader"     d="M1600 1200 L1930 1200 L1930 795"/>
-          <circle class="dot" cx="1930" cy="795" r="10"/>
+          <text class="label-num"  x="1150" y="1129">02</text>
+          <text class="label-name" x="1150" y="1194">RESUME</text>
+          <text class="label-desc" x="1150" y="1252">view / download PDF</text>
+          <path class="leader-hit" d="M1730 1194 L1930 1194 L1930 1041"/>
+          <path class="leader"     d="M1730 1194 L1930 1194 L1930 1041"/>
+          <circle class="dot" cx="1930" cy="1041" r="10"/>
         </g>
 
         <!-- =================== SUB-CALLOUTS (visible only in portfolio mode) =================== -->
 
-        <!-- 02.1 VISUAL COMMUNICATIONS → top bearing -->
+        <!-- 03.1 VISUAL COMMUNICATIONS → top bearing -->
         <g class="callout sub-callout callout-visualcomms" data-target="visualcomms">
-          <text class="label-num"  x="3700" y="110">02.1</text>
+          <text class="label-num"  x="3700" y="110">03.1</text>
           <text class="label-name" x="3700" y="170">VISUAL COMMUNICATIONS</text>
           <path class="leader-hit" d="M3675 170 L3350 170 L2989 816"/>
           <path class="leader"     d="M3675 170 L3350 170 L2989 816"/>
           <circle class="dot" cx="2989" cy="816" r="8"/>
         </g>
 
-        <!-- 02.2 USER ENABLEMENT → middle bearing -->
+        <!-- 03.2 USER ENABLEMENT → middle bearing -->
         <g class="callout sub-callout callout-userenable" data-target="userenable">
-          <text class="label-num"  x="3700" y="290">02.2</text>
+          <text class="label-num"  x="3700" y="290">03.2</text>
           <text class="label-name" x="3700" y="350">USER ENABLEMENT</text>
           <path class="leader-hit" d="M3675 350 L3400 350 L2914 960"/>
           <path class="leader"     d="M3675 350 L3400 350 L2914 960"/>
           <circle class="dot" cx="2914" cy="960" r="8"/>
         </g>
 
-        <!-- 02.3 QUALITY & COMPLIANCE → upper-right bearing -->
+        <!-- 03.3 QUALITY & COMPLIANCE → upper-right bearing -->
         <g class="callout sub-callout callout-qualcomp" data-target="qualcomp">
-          <text class="label-num"  x="3700" y="470">02.3</text>
+          <text class="label-num"  x="3700" y="470">03.3</text>
           <text class="label-name" x="3700" y="530">QUALITY &amp; COMPLIANCE</text>
           <path class="leader-hit" d="M3675 530 L3400 530 L3055 883"/>
           <path class="leader"     d="M3675 530 L3400 530 L3055 883"/>
           <circle class="dot" cx="3055" cy="883" r="8"/>
         </g>
 
-        <!-- 02.4 SINGLE-SOURCING → lower-left bearing. Lifted higher so the gap
-             between 02.4 name and 02.5 num matches the 120u spacing used by 02.1-02.3.
+        <!-- 03.4 SINGLE-SOURCING → lower-left bearing. Lifted higher so the gap
+             between 03.4 name and 03.5 num matches the 120u spacing used by 03.1-03.3.
              Leader start pushed to x=2390 (was 2360) to clear "SINGLE-SOURCING" (~648px). -->
         <g class="callout sub-callout callout-singsource" data-target="singsource">
-          <text class="label-num"  x="1700" y="1230">02.4</text>
-          <text class="label-name" x="1700" y="1290">SINGLE-SOURCING</text>
-          <path class="leader-hit" d="M2390 1290 L2600 1290 L2903 1176"/>
-          <path class="leader"     d="M2390 1290 L2600 1290 L2903 1176"/>
+          <text class="label-num"  x="1700" y="1300">03.4</text>
+          <text class="label-name" x="1700" y="1360">SINGLE-SOURCING</text>
+          <path class="leader-hit" d="M2390 1360 L2600 1360 L2903 1176"/>
+          <path class="leader"     d="M2390 1360 L2600 1360 L2903 1176"/>
           <circle class="dot" cx="2903" cy="1176" r="8"/>
         </g>
 
-        <!-- 02.5 PROCESS DEVELOPMENT → bottom bearing. Sits 120u below 02.4 (matches 02.1-02.3 spacing).
+        <!-- 03.5 PROCESS DEVELOPMENT → bottom bearing. Sits 120u below 03.4 (matches 03.1-03.3 spacing).
              Leader start pushed to x=2560 (was 2475) to clear "PROCESS DEVELOPMENT" (~821px). -->
         <g class="callout sub-callout callout-procdev" data-target="procdev">
-          <text class="label-num"  x="1700" y="1410">02.5</text>
-          <text class="label-name" x="1700" y="1470">PROCESS DEVELOPMENT</text>
-          <path class="leader-hit" d="M2560 1470 L2750 1470 L2970 1246"/>
-          <path class="leader"     d="M2560 1470 L2750 1470 L2970 1246"/>
+          <text class="label-num"  x="1700" y="1480">03.5</text>
+          <text class="label-name" x="1700" y="1540">PROCESS DEVELOPMENT</text>
+          <path class="leader-hit" d="M2560 1540 L2750 1540 L2970 1246"/>
+          <path class="leader"     d="M2560 1540 L2750 1540 L2970 1246"/>
           <circle class="dot" cx="2970" cy="1246" r="8"/>
         </g>
 

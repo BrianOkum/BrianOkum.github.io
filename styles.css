@@ -645,12 +645,9 @@ a {
 .cad-stage[data-state="userenable"]   img.layer-userenable,
 .cad-stage[data-state="qualcomp"]     img.layer-qualcomp,
 .cad-stage[data-state="singsource"]   img.layer-singsource,
-.cad-stage[data-state="procdev"]      img.layer-procdev { opacity: 1; }
+.cad-stage[data-state="procdev"]      img.layer-procdev,
+.cad-stage[data-state="resume"]       img.layer-resume { opacity: 1; }
 .cad-stage:not([data-state="default"]) img.layer-default { opacity: 0; }
-
-/* RESUME hover has no dedicated exploded-view layer — keep the default render
-   visible instead of blanking the canvas. */
-.cad-stage[data-state="resume"] img.layer-default { opacity: 1; }
 
 /* ---- SVG callout overlay ---- */
 .cad-overlay {
