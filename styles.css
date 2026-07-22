@@ -648,6 +648,10 @@ a {
 .cad-stage[data-state="procdev"]      img.layer-procdev { opacity: 1; }
 .cad-stage:not([data-state="default"]) img.layer-default { opacity: 0; }
 
+/* RESUME hover has no dedicated exploded-view layer — keep the default render
+   visible instead of blanking the canvas. */
+.cad-stage[data-state="resume"] img.layer-default { opacity: 1; }
+
 /* ---- SVG callout overlay ---- */
 .cad-overlay {
   position: absolute; inset: 0;
@@ -689,6 +693,7 @@ a {
 .cad-stage[data-state="about"]    .main-callout:not(.callout-about)    { opacity: 0.30; }
 .cad-stage[data-state="insights"] .main-callout:not(.callout-insights) { opacity: 0.30; }
 .cad-stage[data-state="contact"]  .main-callout:not(.callout-contact)  { opacity: 0.30; }
+.cad-stage[data-state="resume"]   .main-callout:not(.callout-resume)   { opacity: 0.30; }
 
 .cad-stage[data-state="about"]        .callout-about        text,
 .cad-stage[data-state="contact"]      .callout-contact      text,
@@ -698,7 +703,8 @@ a {
 .cad-stage[data-state="userenable"]   .callout-userenable   text,
 .cad-stage[data-state="qualcomp"]     .callout-qualcomp     text,
 .cad-stage[data-state="singsource"]   .callout-singsource   text,
-.cad-stage[data-state="procdev"]      .callout-procdev      text { fill: var(--cad-accent); }
+.cad-stage[data-state="procdev"]      .callout-procdev      text,
+.cad-stage[data-state="resume"]       .callout-resume       text { fill: var(--cad-accent); }
 
 .cad-stage[data-state="about"]        .callout-about        .leader,
 .cad-stage[data-state="contact"]      .callout-contact      .leader,
@@ -708,7 +714,8 @@ a {
 .cad-stage[data-state="userenable"]   .callout-userenable   .leader,
 .cad-stage[data-state="qualcomp"]     .callout-qualcomp     .leader,
 .cad-stage[data-state="singsource"]   .callout-singsource   .leader,
-.cad-stage[data-state="procdev"]      .callout-procdev      .leader { stroke: var(--cad-accent); }
+.cad-stage[data-state="procdev"]      .callout-procdev      .leader,
+.cad-stage[data-state="resume"]       .callout-resume       .leader { stroke: var(--cad-accent); }
 
 .cad-stage[data-state="about"]        .callout-about        .dot,
 .cad-stage[data-state="contact"]      .callout-contact      .dot,
@@ -718,7 +725,8 @@ a {
 .cad-stage[data-state="userenable"]   .callout-userenable   .dot,
 .cad-stage[data-state="qualcomp"]     .callout-qualcomp     .dot,
 .cad-stage[data-state="singsource"]   .callout-singsource   .dot,
-.cad-stage[data-state="procdev"]      .callout-procdev      .dot { fill: var(--cad-accent); }
+.cad-stage[data-state="procdev"]      .callout-procdev      .dot,
+.cad-stage[data-state="resume"]       .callout-resume       .dot { fill: var(--cad-accent); }
 
 
 /* ---------- HOME MOBILE NAV (fallback for landing on small screens) ---------- */

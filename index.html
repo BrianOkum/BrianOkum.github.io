@@ -72,6 +72,8 @@
         <rect    class="hotzone" data-target="portfolio" x="2173" y="802"  width="690"  height="275"/>
         <rect    class="hotzone" data-target="insights"  x="3050" y="945"  width="555"  height="263"/>
         <rect    class="hotzone" data-target="contact"   x="3658" y="1012" width="750"  height="340"/>
+        <!-- RESUME hot zone: the collar/bearing part between the ABOUT shaft and the PORTFOLIO subassembly -->
+        <circle  class="hotzone" data-target="resume"    cx="1930" cy="795" r="170"/>
         <!-- Sub-callout hot zones: 5 bearings clustered between PORTFOLIO and CONTACT -->
         <circle class="hotzone" data-target="visualcomms"  cx="2989" cy="816"  r="45"/>
         <circle class="hotzone" data-target="userenable"   cx="2914" cy="960"  r="45"/>
@@ -131,6 +133,19 @@
           <path class="leader-hit" d="M3640 1435 L4030 1435 L4030 1360"/>
           <path class="leader"     d="M3640 1435 L4030 1435 L4030 1360"/>
           <circle class="dot" cx="4030" cy="1360" r="10"/>
+        </g>
+
+        <!-- RESUME → collar between the ABOUT shaft and the PORTFOLIO subassembly.
+             Clicking the part or this callout opens the resume PDF in a new tab.
+             The PDF (not the page HTML) carries phone/contact details, keeping them
+             out of scrape-able page markup. Label sits in the open lower-left space;
+             leader runs right then up onto the collar. -->
+        <g class="callout main-callout callout-resume" data-target="resume">
+          <text class="label-name" x="1000" y="1200">RESUME</text>
+          <text class="label-desc" x="1000" y="1258">view / download (PDF)</text>
+          <path class="leader-hit" d="M1600 1200 L1930 1200 L1930 795"/>
+          <path class="leader"     d="M1600 1200 L1930 1200 L1930 795"/>
+          <circle class="dot" cx="1930" cy="795" r="10"/>
         </g>
 
         <!-- =================== SUB-CALLOUTS (visible only in portfolio mode) =================== -->

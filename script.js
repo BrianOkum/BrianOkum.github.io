@@ -61,6 +61,13 @@ function initCadLanding() {
     el.addEventListener('mouseleave', scheduleRevert);
     el.style.cursor = 'pointer';
     el.addEventListener('click', () => {
+      // Resume opens the PDF in a new tab rather than navigating in-page.
+      // Keeping the resume as a standalone PDF keeps phone/contact details
+      // out of the scrape-able page HTML.
+      if (el.dataset.target === 'resume') {
+        window.open('Brian-Okum-Resume.pdf', '_blank', 'noopener');
+        return;
+      }
       const href = NAV[el.dataset.target];
       if (href) window.location.href = href;
     });
