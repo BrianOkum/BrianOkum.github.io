@@ -719,6 +719,14 @@ a {
   stroke: rgba(0,0,0,0); stroke-width: 9; fill: none;
   pointer-events: stroke;
 }
+
+/* Sub-callouts sit one step down the type scale: their num takes the main
+   callouts' desc size and their name takes the main callouts' num size. The
+   smaller glyphs are a smaller hover target, so their leader gets a wider
+   invisible hit stroke to compensate. */
+.sub-callout .label-num  { font-size: 35px; }
+.sub-callout .label-name { font-size: 45px; }
+.sub-callout .leader-hit { stroke-width: 12; }
 .main-callout { transition: opacity var(--cad-fade-med); }
 .sub-callout  { opacity: 0; pointer-events: none; transition: opacity var(--cad-fade-med); }
 

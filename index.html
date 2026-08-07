@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260806b">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
@@ -190,56 +190,58 @@
         <!-- =================== SUB-CALLOUTS (visible only in portfolio mode) ===================
              The five portfolio sections are children of 02 PORTFOLIO, so they are
              numbered 02.1–02.5. They stack in the empty space below the assembly,
-             right-aligned (text-anchor="end") to a common edge at x=1000. Pulling
+             right-aligned (text-anchor="end") to a common edge at x=1094. Pulling
              that edge left buys room for longer 45° runs, so each leader stands
-             well off the pin cluster, and the 195u line spacing keeps 02.5's
-             baseline at y2068 — just above y2085, the lowest point of the
-             CONTACT shaft. All five 45° runs are parallel, so they never cross. -->
+             well off the pin cluster. Sub type sits one step below the main
+             callouts (35/45px vs 45/54px), so the line spacing tightens to
+             175u and 02.5's baseline lands at y1988 — clear of y2085, the
+             lowest point of the CONTACT shaft. All five 45° runs are
+             parallel, so they never cross. -->
 
         <!-- 02.1 VISUAL COMMUNICATIONS → upper-left pin -->
         <g class="callout sub-callout callout-visualcomms" data-target="visualcomms" text-anchor="end">
-          <text class="label-num"  x="1000" y="1233">02.1</text>
-          <text class="label-name" x="1000" y="1288">VISUAL COMMUNICATIONS</text>
-          <path class="leader-hit" d="M1045 1288 L1179 1288 L1364 1103"/>
-          <path class="leader"     d="M1045 1288 L1179 1288 L1364 1103"/>
+          <text class="label-num"  x="1094" y="1242">02.1</text>
+          <text class="label-name" x="1094" y="1288">VISUAL COMMUNICATIONS</text>
+          <path class="leader-hit" d="M1139 1288 L1179 1288 L1364 1103"/>
+          <path class="leader"     d="M1139 1288 L1179 1288 L1364 1103"/>
         </g>
 
         <!-- 02.2 USER ENABLEMENT → lower-left pin -->
         <g class="callout sub-callout callout-userenable" data-target="userenable" text-anchor="end">
-          <text class="label-num"  x="1000" y="1428">02.2</text>
-          <text class="label-name" x="1000" y="1483">USER ENABLEMENT</text>
-          <path class="leader-hit" d="M1045 1483 L1161 1483 L1353 1291"/>
-          <path class="leader"     d="M1045 1483 L1161 1483 L1353 1291"/>
+          <text class="label-num"  x="1094" y="1417">02.2</text>
+          <text class="label-name" x="1094" y="1463">USER ENABLEMENT</text>
+          <path class="leader-hit" d="M1139 1463 L1181 1463 L1353 1291"/>
+          <path class="leader"     d="M1139 1463 L1181 1463 L1353 1291"/>
         </g>
 
         <!-- 02.3 QUALITY & COMPLIANCE → bottom-left pin -->
         <g class="callout sub-callout callout-qualcomp" data-target="qualcomp" text-anchor="end">
-          <text class="label-num"  x="1000" y="1623">02.3</text>
-          <text class="label-name" x="1000" y="1678">QUALITY &amp; COMPLIANCE</text>
-          <path class="leader-hit" d="M1045 1678 L1176 1678 L1433 1421"/>
-          <path class="leader"     d="M1045 1678 L1176 1678 L1433 1421"/>
+          <text class="label-num"  x="1094" y="1592">02.3</text>
+          <text class="label-name" x="1094" y="1638">QUALITY &amp; COMPLIANCE</text>
+          <path class="leader-hit" d="M1139 1638 L1216 1638 L1433 1421"/>
+          <path class="leader"     d="M1139 1638 L1216 1638 L1433 1421"/>
         </g>
 
         <!-- 02.4 SINGLE-SOURCING → bottom-centre pin. Like 02.5 it finishes with
              a short 90° rise instead of running 45° all the way in. The 55u rise
-             pushes the diagonal's start 98u further right, so it no longer
-             crowds the 02.3 leader (clearance at x=1433 goes from 151u to 249u)
-             and the stack reads evenly from 02.3 through 02.5. -->
+             pushes the diagonal's start right, keeping 249u of clearance from
+             the 02.3 leader at x=1433 and letting the stack read evenly from
+             02.3 through 02.5. -->
         <g class="callout sub-callout callout-singsource" data-target="singsource" text-anchor="end">
-          <text class="label-num"  x="1000" y="1818">02.4</text>
-          <text class="label-name" x="1000" y="1873">SINGLE-SOURCING</text>
-          <path class="leader-hit" d="M1045 1873 L1230 1873 L1623 1480 L1623 1425"/>
-          <path class="leader"     d="M1045 1873 L1230 1873 L1623 1480 L1623 1425"/>
+          <text class="label-num"  x="1094" y="1767">02.4</text>
+          <text class="label-name" x="1094" y="1813">SINGLE-SOURCING</text>
+          <path class="leader-hit" d="M1139 1813 L1290 1813 L1623 1480 L1623 1425"/>
+          <path class="leader"     d="M1139 1813 L1290 1813 L1623 1480 L1623 1425"/>
         </g>
 
         <!-- 02.5 PROCESS DEVELOPMENT → right-hand pin. A 45° run straight into
              this pin would clip the 02.4 pin en route, so the diagonal stops short
              at x=1773 and a 90° rise finishes the approach from below. -->
         <g class="callout sub-callout callout-procdev" data-target="procdev" text-anchor="end">
-          <text class="label-num"  x="1000" y="2013">02.5</text>
-          <text class="label-name" x="1000" y="2068">PROCESS DEVELOPMENT</text>
-          <path class="leader-hit" d="M1045 2068 L1250 2068 L1773 1545 L1773 1300"/>
-          <path class="leader"     d="M1045 2068 L1250 2068 L1773 1545 L1773 1300"/>
+          <text class="label-num"  x="1094" y="1942">02.5</text>
+          <text class="label-name" x="1094" y="1988">PROCESS DEVELOPMENT</text>
+          <path class="leader-hit" d="M1139 1988 L1330 1988 L1773 1545 L1773 1300"/>
+          <path class="leader"     d="M1139 1988 L1330 1988 L1773 1545 L1773 1300"/>
         </g>
 
       </svg>
@@ -252,6 +254,6 @@
     <p class="footer-text">Brian Okum 2026</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260806b"></script>
 </body>
 </html>
