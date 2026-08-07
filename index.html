@@ -37,18 +37,23 @@
         <span class="home-mobile-label">About</span>
         <span class="home-mobile-desc">personal background</span>
       </a>
-      <a href="Brian-Okum-Resume.pdf" target="_blank" rel="noopener" class="home-mobile-link">
-        <span class="home-mobile-num">02</span>
-        <span class="home-mobile-label">Resume</span>
-        <span class="home-mobile-desc">view / download PDF</span>
-      </a>
       <a href="portfolio.html" class="home-mobile-link">
-        <span class="home-mobile-num">03</span>
+        <span class="home-mobile-num">02</span>
         <span class="home-mobile-label">Portfolio</span>
         <span class="home-mobile-desc">selected work</span>
       </a>
-      <a href="contact.html" class="home-mobile-link">
+      <a href="Brian-Okum-Resume.pdf" target="_blank" rel="noopener" class="home-mobile-link">
+        <span class="home-mobile-num">03</span>
+        <span class="home-mobile-label">Resume</span>
+        <span class="home-mobile-desc">view / download PDF</span>
+      </a>
+      <a href="insights.html" class="home-mobile-link">
         <span class="home-mobile-num">04</span>
+        <span class="home-mobile-label">Insights</span>
+        <span class="home-mobile-desc">articles &amp; ideas</span>
+      </a>
+      <a href="contact.html" class="home-mobile-link">
+        <span class="home-mobile-num">05</span>
         <span class="home-mobile-label">Contact</span>
         <span class="home-mobile-desc">get in touch</span>
       </a>
@@ -56,154 +61,185 @@
 
     <div class="cad-stage" data-state="default">
 
-      <!-- Image layer stack — DEFAULT shows by default; others fade in on state change -->
-      <img class="layer-default"      src="images/exploded-view-DEFAULT.png"      alt="Exploded mechanical assembly representing the portfolio sections">
-      <img class="layer-about"        src="images/exploded-view-ABOUT.png"        alt="">
-      <img class="layer-portfolio"    src="images/exploded-view-PORTFOLIO.png"    alt="">
-      <img class="layer-contact"      src="images/exploded-view-CONTACT.png"      alt="">
-      <img class="layer-insights"     src="images/exploded-view-INSIGHTS.png"     alt="">
-      <img class="layer-visualcomms"  src="images/exploded-view-VISUALCOMMS.png"  alt="">
-      <img class="layer-userenable"   src="images/exploded-view-USERENABLE.png"   alt="">
-      <img class="layer-qualcomp"     src="images/exploded-view-QUALCOMP.png"     alt="">
-      <img class="layer-singsource"   src="images/exploded-view-SINGSOURCE.png"   alt="">
-      <img class="layer-procdev"      src="images/exploded-view-PROCDEV.png"      alt="">
-      <img class="layer-resume"       src="images/exploded-view-RESUME.png"       alt="">
+      <!-- Image layer stack — DEFAULT shows by default; others fade in on state change.
+           Source: KeyShot export, 3840 × 2400, transparent PNG. -->
+      <img class="layer-default"      src="images/index_DEFAULT.0.png"   alt="Exploded mechanical assembly representing the portfolio sections">
+      <img class="layer-about"        src="images/index_ABOUT.png"       alt="">
+      <img class="layer-portfolio"    src="images/index_PORTFOLIO.png"   alt="">
+      <img class="layer-contact"      src="images/index_CONTACT.png"     alt="">
+      <img class="layer-insights"     src="images/index_INSIGHTS.png"    alt="">
+      <img class="layer-visualcomms"  src="images/index_VISCOMM.png"     alt="">
+      <img class="layer-userenable"   src="images/index_USERENABLE.png"  alt="">
+      <img class="layer-qualcomp"     src="images/index_QUALCOM.png"     alt="">
+      <img class="layer-singsource"   src="images/index_SINGSOURCE.png"  alt="">
+      <img class="layer-procdev"      src="images/index_PROCDEV.png"     alt="">
+      <img class="layer-resume"       src="images/index_RESUME.png"      alt="">
 
-      <svg class="cad-overlay" viewBox="0 0 5076 1500" preserveAspectRatio="xMidYMid meet">
+      <svg class="cad-overlay" viewBox="0 180 3840 2220" preserveAspectRatio="xMidYMid meet">
 
         <!-- =================== HOT ZONES =================== -->
-        <!-- All positions recalibrated against the new 5076×1928 PNG export.
-             Parts shifted UP ~17px vs the previous export. -->
-        <polygon class="hotzone" data-target="about" points="300,605 1860,797 1860,947 300,755"/>
-        <rect    class="hotzone" data-target="portfolio" x="2173" y="802"  width="690"  height="275"/>
-        <rect    class="hotzone" data-target="insights"  x="3050" y="945"  width="555"  height="263"/>
-        <rect    class="hotzone" data-target="contact"   x="3658" y="1012" width="750"  height="340"/>
-        <!-- RESUME hot zone: the collar/bearing part between the ABOUT shaft and the PORTFOLIO subassembly -->
-        <circle  class="hotzone" data-target="resume"    cx="1930" cy="900" r="160"/>
-        <!-- Sub-callout hot zones: 5 bearings clustered between PORTFOLIO and CONTACT -->
-        <circle class="hotzone" data-target="visualcomms"  cx="2989" cy="816"  r="45"/>
-        <circle class="hotzone" data-target="userenable"   cx="2914" cy="960"  r="45"/>
-        <circle class="hotzone" data-target="qualcomp"     cx="3055" cy="883"  r="45"/>
-        <circle class="hotzone" data-target="singsource"   cx="2903" cy="1176" r="45"/>
-        <circle class="hotzone" data-target="procdev"      cx="2970" cy="1246" r="45"/>
+        <!-- Coordinates derived from the KeyShot layers themselves: each hover PNG
+             was diffed against index_DEFAULT.0.png, and the convex hull of the
+             resulting highlight mask was reduced to its 8 most significant
+             vertices. An earlier 4-point version (left/top/right/bottom extremes)
+             was a bad fit on parts that change diameter — it covered only 49.5%
+             of INSIGHTS, leaving its flared socket end unhoverable. These hulls
+             cover 94-98% of each part. -->
+        <polygon class="hotzone" data-target="about"     points="428,489 557,394 817,524 975,635 962,741 900,787 711,725 447,593"/>
+        <polygon class="hotzone" data-target="portfolio" points="989,770 1011,720 1084,685 1402,844 1414,936 1365,993 1326,996 1006,836"/>
+        <polygon class="hotzone" data-target="insights"  points="2145,1322 2210,1280 2539,1395 2639,1472 2659,1608 2539,1620 2448,1578 2157,1382"/>
+        <polygon class="hotzone" data-target="contact"   points="2665,1542 2740,1562 3054,1719 3632,2014 3595,2085 3008,1797 2690,1638 2642,1599"/>
+        <!-- RESUME hot zone: the washer between the PORTFOLIO cluster and the INSIGHTS connector -->
+        <ellipse class="hotzone" data-target="resume"    cx="2065" cy="1275" rx="95" ry="115"/>
+        <!-- Sub-callout hot zones: the 5 dowel pins in the lower-left cluster.
+             Pin radius is ~29u; hot zones are enlarged to 48u for easier hovering. -->
+        <circle class="hotzone" data-target="visualcomms"  cx="1396" cy="1071" r="48"/>
+        <circle class="hotzone" data-target="userenable"   cx="1385" cy="1259" r="48"/>
+        <circle class="hotzone" data-target="qualcomp"     cx="1465" cy="1389" r="48"/>
+        <circle class="hotzone" data-target="singsource"   cx="1623" cy="1382" r="48"/>
+        <circle class="hotzone" data-target="procdev"      cx="1773" cy="1257" r="48"/>
+
+        <!-- =================== ASSEMBLY LINES ===================
+             Construction geometry derived from the render, not drawn by hand.
+
+             THRUST AXIS: the centroids of the ten coaxial components (end pin,
+             disc, barrel, sleeve, collar, cage, collar, washer, connector,
+             shaft) were least-squares fitted to y = 0.49981x + 242.04 — a 26.57°
+             line that every centroid sits within 4.3u of, confirming the parts
+             really are coaxial. The centreline runs the full length and
+             overshoots both ends, drawn dash-dot in the usual convention.
+
+             RADIAL LINES: ten rollers seat in the cage at (1633,1061). Each line
+             runs from its roller toward the cage centre, ray-marched against the
+             occupancy mask so it stops at the cage with the same 17u gap the
+             leaders use. Two rollers are occluded by the collar; their lines run
+             flush into its edge so they read as passing behind it. -->
+        <g class="assembly-lines" aria-hidden="true">
+          <path class="axis-line" d="M38 261 L3795 2139"/>
+          <path class="radial-line" d="M1417 1233 L1551 1126"/>  <!-- roller 1385,1259 -->
+          <path class="radial-line" d="M1482 1355 L1586 1152"/>  <!-- roller 1465,1389 -->
+          <path class="radial-line" d="M1624 1342 L1630 1166"/>  <!-- roller 1623,1382 -->
+          <path class="radial-line" d="M1649 784 L1639 956"/>  <!-- roller 1651,743 -->
+          <path class="radial-line" d="M1746 1220 L1686 1135"/>  <!-- roller 1773,1257 -->
+          <path class="radial-line" d="M1780 776 L1680 970"/>  <!-- roller 1797,742 -->
+          <path class="radial-line" d="M1827 1063 L1724 1062"/>  <!-- roller 1873,1064 -->
+          <path class="radial-line" d="M1843 890 L1714 995"/>  <!-- roller 1875,864 -->
+          <path class="radial-line" d="M1443 1069 L1480 1067"/>  <!-- roller 1396,1071 — occluded, runs flush under the collar -->
+          <path class="radial-line" d="M1526 912 L1541 933"/>  <!-- roller 1498,874 — occluded, runs flush under the collar -->
+        </g>
 
         <!-- =================== MAIN CALLOUTS =================== -->
+        <!-- Leader rules, applied uniformly:
+             • Every leader is a short horizontal stub off the text, then a 45°
+               run to the part (02.5 adds a final 90° rise — see its note).
+             • Stubs start 45u clear of the text edge and never touch a glyph.
+             • Every leader stops the same distance short of its part: the 45°
+               ray was cast against the DEFAULT layer's occupancy mask and backed
+               off 24u, giving an identical 17u perpendicular gap on all ten.
+             • Lines only — no terminator dots. -->
 
-        <!-- 01 ABOUT → long shaft (left). Text slid LEFT to x=200 so the wider
-             "personal background" desc (≈524px at 46px font) clears the vertical
-             leader at x=1000. Dot stays anchored to the shaft. -->
+        <!-- 01 ABOUT → knurled barrel, top left. -->
         <g class="callout main-callout callout-about" data-target="about">
-          <text class="label-num"  x="304" y="328">01</text>
-          <text class="label-name" x="304" y="393">ABOUT</text>
-          <text class="label-desc" x="304" y="436">personal background</text>
-          <path class="leader-hit" d="M854 393 L1000 393 L1000 646"/>
-          <path class="leader"     d="M854 393 L1000 393 L1000 646"/>
-          <circle class="dot" cx="1000" cy="646" r="10"/>
+          <text class="label-num"  x="880" y="270">01</text>
+          <text class="label-name" x="880" y="319">ABOUT</text>
+          <text class="label-desc" x="880" y="352">personal background</text>
+          <path class="leader-hit" d="M835 319 L775 319 L669 425"/>
+          <path class="leader"     d="M835 319 L775 319 L669 425"/>
         </g>
 
-        <!-- 03 PORTFOLIO → middle subassembly. Leader start pushed to x=2380
-             (was 2240) to clear "PORTFOLIO" at 72px (~389px wide). -->
+        <!-- 02 PORTFOLIO → plain sleeve, second from left. -->
         <g class="callout main-callout callout-portfolio" data-target="portfolio">
-          <text class="label-num"  x="1950" y="380">03</text>
-          <text class="label-name" x="1950" y="445">PORTFOLIO</text>
-          <text class="label-desc" x="1950" y="488">selected work</text>
-          <path class="leader-hit" d="M2380 445 L2500 445 L2500 810"/>
-          <path class="leader"     d="M2380 445 L2500 445 L2500 810"/>
-          <circle class="dot" cx="2500" cy="810" r="10"/>
+          <text class="label-num"  x="555" y="967">02</text>
+          <text class="label-name" x="555" y="1016">PORTFOLIO</text>
+          <text class="label-desc" x="555" y="1049">selected work</text>
+          <path class="leader-hit" d="M911 1016 L971 1016 L1086 901"/>
+          <path class="leader"     d="M911 1016 L971 1016 L1086 901"/>
         </g>
 
-        <!-- 04 INSIGHTS → orange cylinder body (right of the bearing cluster,
-             left of the CONTACT connector; highlighted part spans x3043-3605,
-             y941-1208). Text sits in the right column, well below 03.3 QUALITY &
-             COMPLIANCE (y530) so neither text nor leader crowds it. Leader runs
-             left from the label, then drops onto the cylinder body. -->
-        <g class="callout main-callout callout-insights" data-target="insights">
-          <text class="label-num"  x="3700" y="753">04</text>
-          <text class="label-name" x="3700" y="818">INSIGHTS</text>
-          <text class="label-desc" x="3700" y="861">articles &amp; ideas</text>
-          <path class="leader-hit" d="M3675 818 L3350 810 L3350 920"/>
-          <path class="leader"     d="M3675 818 L3350 810 L3350 920"/>
-          <circle class="dot" cx="3350" cy="920" r="10"/>
-        </g>
-
-        <!-- 05 CONTACT → large cylinder on right.
-             Label and dot dropped further down so the dot sits CLEARLY below the
-             cylinder's visible shadow (which extends to y≈1353). Dot at y=1360
-             is just below that boundary, so the leader is no longer on the part.
-             Leader start pushed to x=3640 (was 3610) for breathing room after
-             "CONTACT" at 72px. -->
-        <g class="callout main-callout callout-contact" data-target="contact">
-          <text class="label-num"  x="3300" y="1458">05</text>
-          <text class="label-name" x="3300" y="1523">CONTACT</text>
-          <text class="label-desc" x="3300" y="1566">get in touch</text>
-          <path class="leader-hit" d="M3640 1523 L4030 1523 L4030 1360"/>
-          <path class="leader"     d="M3640 1523 L4030 1523 L4030 1360"/>
-          <circle class="dot" cx="4030" cy="1360" r="10"/>
-        </g>
-
-        <!-- RESUME → collar between the ABOUT shaft and the PORTFOLIO subassembly.
+        <!-- 03 RESUME → washer at mid-assembly. Label sits high and right so the
+             45° run is long enough to keep clear of the 04 INSIGHTS block below.
              Clicking the part or this callout opens the resume PDF in a new tab.
-             The PDF (not the page HTML) carries phone/contact details, keeping them
-             out of scrape-able page markup. Text sits lower-left; the leader runs
-             right, then up to a dot that sits just BELOW the collar (so the leader
-             stops under the part instead of crossing over it). -->
+             The PDF (not the page HTML) carries phone/contact details, keeping
+             them out of scrape-able page markup. -->
         <g class="callout main-callout callout-resume" data-target="resume">
-          <text class="label-num"  x="1150" y="1129">02</text>
-          <text class="label-name" x="1150" y="1194">RESUME</text>
-          <text class="label-desc" x="1150" y="1252">view / download PDF</text>
-          <path class="leader-hit" d="M1730 1194 L1930 1194 L1930 1041"/>
-          <path class="leader"     d="M1730 1194 L1930 1194 L1930 1041"/>
-          <circle class="dot" cx="1930" cy="1041" r="10"/>
+          <text class="label-num"  x="2513" y="887">03</text>
+          <text class="label-name" x="2513" y="936">RESUME</text>
+          <text class="label-desc" x="2513" y="969">view / download PDF</text>
+          <path class="leader-hit" d="M2468 936 L2408 936 L2162 1182"/>
+          <path class="leader"     d="M2468 936 L2408 936 L2162 1182"/>
         </g>
 
-        <!-- =================== SUB-CALLOUTS (visible only in portfolio mode) =================== -->
-
-        <!-- 03.1 VISUAL COMMUNICATIONS → top bearing -->
-        <g class="callout sub-callout callout-visualcomms" data-target="visualcomms">
-          <text class="label-num"  x="3700" y="110">03.1</text>
-          <text class="label-name" x="3700" y="170">VISUAL COMMUNICATIONS</text>
-          <path class="leader-hit" d="M3675 170 L3350 170 L2989 816"/>
-          <path class="leader"     d="M3675 170 L3350 170 L2989 816"/>
-          <circle class="dot" cx="2989" cy="816" r="8"/>
+        <!-- 04 INSIGHTS → stepped connector body, right of the washer. -->
+        <g class="callout main-callout callout-insights" data-target="insights">
+          <text class="label-num"  x="2656" y="1209">04</text>
+          <text class="label-name" x="2656" y="1258">INSIGHTS</text>
+          <text class="label-desc" x="2656" y="1291">articles &amp; ideas</text>
+          <path class="leader-hit" d="M2611 1258 L2551 1258 L2453 1356"/>
+          <path class="leader"     d="M2611 1258 L2551 1258 L2453 1356"/>
         </g>
 
-        <!-- 03.2 USER ENABLEMENT → middle bearing -->
-        <g class="callout sub-callout callout-userenable" data-target="userenable">
-          <text class="label-num"  x="3700" y="290">03.2</text>
-          <text class="label-name" x="3700" y="350">USER ENABLEMENT</text>
-          <path class="leader-hit" d="M3675 350 L3400 350 L2914 960"/>
-          <path class="leader"     d="M3675 350 L3400 350 L2914 960"/>
-          <circle class="dot" cx="2914" cy="960" r="8"/>
+        <!-- 05 CONTACT → long output shaft, bottom right. -->
+        <g class="callout main-callout callout-contact" data-target="contact">
+          <text class="label-num"  x="3105" y="1495">05</text>
+          <text class="label-name" x="3105" y="1544">CONTACT</text>
+          <text class="label-desc" x="3105" y="1577">get in touch</text>
+          <path class="leader-hit" d="M3060 1544 L3000 1544 L2918 1626"/>
+          <path class="leader"     d="M3060 1544 L3000 1544 L2918 1626"/>
         </g>
 
-        <!-- 03.3 QUALITY & COMPLIANCE → upper-right bearing -->
-        <g class="callout sub-callout callout-qualcomp" data-target="qualcomp">
-          <text class="label-num"  x="3700" y="470">03.3</text>
-          <text class="label-name" x="3700" y="530">QUALITY &amp; COMPLIANCE</text>
-          <path class="leader-hit" d="M3675 530 L3400 530 L3055 883"/>
-          <path class="leader"     d="M3675 530 L3400 530 L3055 883"/>
-          <circle class="dot" cx="3055" cy="883" r="8"/>
+        <!-- =================== SUB-CALLOUTS (visible only in portfolio mode) ===================
+             The five portfolio sections are children of 02 PORTFOLIO, so they are
+             numbered 02.1–02.5. They stack in the empty space below the assembly,
+             right-aligned (text-anchor="end") to a common edge at x=1000. Pulling
+             that edge left buys room for longer 45° runs, so each leader stands
+             well off the pin cluster, and the 195u line spacing keeps 02.5's
+             baseline at y2068 — just above y2085, the lowest point of the
+             CONTACT shaft. All five 45° runs are parallel, so they never cross. -->
+
+        <!-- 02.1 VISUAL COMMUNICATIONS → upper-left pin -->
+        <g class="callout sub-callout callout-visualcomms" data-target="visualcomms" text-anchor="end">
+          <text class="label-num"  x="1000" y="1233">02.1</text>
+          <text class="label-name" x="1000" y="1288">VISUAL COMMUNICATIONS</text>
+          <path class="leader-hit" d="M1045 1288 L1179 1288 L1364 1103"/>
+          <path class="leader"     d="M1045 1288 L1179 1288 L1364 1103"/>
         </g>
 
-        <!-- 03.4 SINGLE-SOURCING → lower-left bearing. Lifted higher so the gap
-             between 03.4 name and 03.5 num matches the 120u spacing used by 03.1-03.3.
-             Leader start pushed to x=2390 (was 2360) to clear "SINGLE-SOURCING" (~648px). -->
-        <g class="callout sub-callout callout-singsource" data-target="singsource">
-          <text class="label-num"  x="1700" y="1300">03.4</text>
-          <text class="label-name" x="1700" y="1360">SINGLE-SOURCING</text>
-          <path class="leader-hit" d="M2390 1360 L2600 1360 L2903 1176"/>
-          <path class="leader"     d="M2390 1360 L2600 1360 L2903 1176"/>
-          <circle class="dot" cx="2903" cy="1176" r="8"/>
+        <!-- 02.2 USER ENABLEMENT → lower-left pin -->
+        <g class="callout sub-callout callout-userenable" data-target="userenable" text-anchor="end">
+          <text class="label-num"  x="1000" y="1428">02.2</text>
+          <text class="label-name" x="1000" y="1483">USER ENABLEMENT</text>
+          <path class="leader-hit" d="M1045 1483 L1161 1483 L1353 1291"/>
+          <path class="leader"     d="M1045 1483 L1161 1483 L1353 1291"/>
         </g>
 
-        <!-- 03.5 PROCESS DEVELOPMENT → bottom bearing. Sits 120u below 03.4 (matches 03.1-03.3 spacing).
-             Leader start pushed to x=2560 (was 2475) to clear "PROCESS DEVELOPMENT" (~821px). -->
-        <g class="callout sub-callout callout-procdev" data-target="procdev">
-          <text class="label-num"  x="1700" y="1480">03.5</text>
-          <text class="label-name" x="1700" y="1540">PROCESS DEVELOPMENT</text>
-          <path class="leader-hit" d="M2560 1540 L2750 1540 L2970 1246"/>
-          <path class="leader"     d="M2560 1540 L2750 1540 L2970 1246"/>
-          <circle class="dot" cx="2970" cy="1246" r="8"/>
+        <!-- 02.3 QUALITY & COMPLIANCE → bottom-left pin -->
+        <g class="callout sub-callout callout-qualcomp" data-target="qualcomp" text-anchor="end">
+          <text class="label-num"  x="1000" y="1623">02.3</text>
+          <text class="label-name" x="1000" y="1678">QUALITY &amp; COMPLIANCE</text>
+          <path class="leader-hit" d="M1045 1678 L1176 1678 L1433 1421"/>
+          <path class="leader"     d="M1045 1678 L1176 1678 L1433 1421"/>
+        </g>
+
+        <!-- 02.4 SINGLE-SOURCING → bottom-centre pin. Like 02.5 it finishes with
+             a short 90° rise instead of running 45° all the way in. The 55u rise
+             pushes the diagonal's start 98u further right, so it no longer
+             crowds the 02.3 leader (clearance at x=1433 goes from 151u to 249u)
+             and the stack reads evenly from 02.3 through 02.5. -->
+        <g class="callout sub-callout callout-singsource" data-target="singsource" text-anchor="end">
+          <text class="label-num"  x="1000" y="1818">02.4</text>
+          <text class="label-name" x="1000" y="1873">SINGLE-SOURCING</text>
+          <path class="leader-hit" d="M1045 1873 L1230 1873 L1623 1480 L1623 1425"/>
+          <path class="leader"     d="M1045 1873 L1230 1873 L1623 1480 L1623 1425"/>
+        </g>
+
+        <!-- 02.5 PROCESS DEVELOPMENT → right-hand pin. A 45° run straight into
+             this pin would clip the 02.4 pin en route, so the diagonal stops short
+             at x=1773 and a 90° rise finishes the approach from below. -->
+        <g class="callout sub-callout callout-procdev" data-target="procdev" text-anchor="end">
+          <text class="label-num"  x="1000" y="2013">02.5</text>
+          <text class="label-name" x="1000" y="2068">PROCESS DEVELOPMENT</text>
+          <path class="leader-hit" d="M1045 2068 L1250 2068 L1773 1545 L1773 1300"/>
+          <path class="leader"     d="M1045 2068 L1250 2068 L1773 1545 L1773 1300"/>
         </g>
 
       </svg>

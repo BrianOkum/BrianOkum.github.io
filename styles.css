@@ -25,7 +25,7 @@ html {
 body {
   font-family: 'Mulish', 'Aptos', 'Calibri', 'Segoe UI', sans-serif;
   color: #ffffe6;
-  background-color: #0d1a2c;
+  background-color: #0C1725;
   line-height: 1.6;
 }
 
@@ -47,7 +47,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: #0d1a2c;
+  background-color: #0C1725;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -276,7 +276,7 @@ a {
 .carousel {
   position: relative;
   width: 100%;
-  background-color: #0d1a2c;
+  background-color: #0C1725;
 }
 
 /* The aspect-ratio box now lives on the track, so the dots can sit below
@@ -369,7 +369,7 @@ a {
 .static-image {
   width: 100%;
   aspect-ratio: 6 / 5;
-  background-color: #0d1a2c;
+  background-color: #0C1725;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -472,7 +472,7 @@ a {
   font-weight: 500;
   padding: 12px 32px;
   background-color: #ffffe6;
-  color: #0d1a2c;
+  color: #0C1725;
   border: none;
   cursor: pointer;
   align-self: flex-start;
@@ -568,10 +568,21 @@ a {
 
   max-width: 1920px;
   margin: 0 auto;
-  /* Bottom padding pushes the footer 300px further below the CAD stage on the
-     landing page (was 80px). Scoped to .home-content so other pages keep their
-     original spacing. */
-  padding: 64px 48px 380px;
+  /* The 3840×2400 KeyShot export carries ~280u of empty canvas above the
+     assembly and ~315u below it, so the stage supplies its own breathing room
+     and the page padding can stay lean.
+
+     Vertical padding is tuned for a 1080p laptop and grows with VIEWPORT
+     HEIGHT, not width: .home-content is capped at max-width 1920px, so a wider
+     display doesn't enlarge the stage — it just leaves more vertical room, and
+     fixed padding starts to read as cramped. The calc() is anchored so that at
+     100vh = 1080px it evaluates to exactly the tuned 38px / 20px, then adds
+     0.10px of top and 0.06px of bottom padding per extra pixel of height.
+       1080p → 38 / 20    1440p → 74 / 42    1600p → 90 / 51 (capped at 120/70) */
+  padding-top:    clamp(38px, calc(38px + (100vh - 1080px) * 0.10), 120px);
+  padding-bottom: clamp(20px, calc(20px + (100vh - 1080px) * 0.06),  70px);
+  padding-left: 48px;
+  padding-right: 48px;
 }
 
 .home-intro {
@@ -612,11 +623,18 @@ a {
 .cad-stage {
   position: relative;
   display: block;
-  width: 100%;
+  /* Scaled to 90% and centred (two successive 5% reductions: 0.95 × 0.95).
+     Image layers and SVG overlay share one coordinate space, so this shrinks
+     artwork, leaders and labels together — nothing needs recalculating. */
+  width: 90%;
   max-width: 100%;
-  /* Visible canvas is 5076 × 1500 (SVG viewBox). PNG source is 5076 × 1928 and
-     gets visually cropped on the bottom via object-fit:cover below. */
-  aspect-ratio: 5076 / 1500;
+  margin: 0 auto;
+  /* The KeyShot export is 3840 × 2400 with ~281u of empty canvas above the
+     assembly. 180u of that is cropped off the top, so the visible canvas is
+     3840 × 2220 and the SVG viewBox is "0 180 3840 2220" — overlay units still
+     equal PNG pixels, the window just starts 180 lower. The topmost ink (the
+     "01" label, cap top ≈ y238) still clears the crop with room to spare. */
+  aspect-ratio: 3840 / 2220;
   background-color: var(--cad-bg);
 }
 
@@ -626,11 +644,11 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  /* COVER fills container; the natural PNG height (1928) exceeds the container
-     height (1500 at same width), so the bottom of the image is cropped.
-     object-position: top keeps the top aligned with the SVG viewBox. */
+  /* COVER scales to the container width, leaving 180u of excess height;
+     object-position: bottom throws that excess away off the TOP, matching the
+     180u origin of the SVG viewBox so image and overlay stay registered. */
   object-fit: cover;
-  object-position: top;
+  object-position: bottom;
   user-select: none; pointer-events: none;
   opacity: 0;
   transition: opacity var(--cad-fade-fast);
@@ -658,30 +676,49 @@ a {
 
 .hotzone { fill: rgba(0,0,0,0); cursor: pointer; }
 
+/* ---- Assembly lines (thrust axis + radial roller lines) ----
+   Pure decoration: they sit under the callouts in document order and take no
+   pointer events, so they never steal a hover from a hot zone. Both are dimmed
+   well below the callout ink so they read as construction geometry rather than
+   competing with the labels. */
+.assembly-lines { pointer-events: none; }
+
+.axis-line {
+  fill: none;
+  stroke: var(--cad-ink-dim);
+  stroke-width: 2.5;
+  opacity: 0.38;
+  stroke-dasharray: 64 16 8 16;   /* long-short-long: standard centreline */
+}
+
+.radial-line {
+  fill: none;
+  stroke: var(--cad-ink-dim);
+  stroke-width: 2;
+  opacity: 0.5;
+  stroke-dasharray: 14 10;
+}
+
 .callout text {
   font-family: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
   fill: var(--cad-ink);
   transition: fill var(--cad-fade-fast), opacity var(--cad-fade-med);
   pointer-events: auto;
 }
-.callout .label-num  { font-size: 60px; font-weight: 600; letter-spacing: 0.06em; }
-.callout .label-name { font-size: 72px; letter-spacing: 0.04em; }
-.callout .label-desc { font-size: 46px; fill: var(--cad-ink-dim); letter-spacing: 0.02em; }
+/* Type is scaled by 3840/5076 = 0.757 from the previous 5076-wide viewBox, so the
+   labels render at exactly the same on-screen size as before the KeyShot re-export. */
+.callout .label-num  { font-size: 45px; font-weight: 600; letter-spacing: 0.06em; }
+.callout .label-name { font-size: 54px; letter-spacing: 0.04em; }
+.callout .label-desc { font-size: 35px; fill: var(--cad-ink-dim); letter-spacing: 0.02em; }
 .callout .leader {
-  stroke: var(--cad-ink); stroke-width: 3; fill: none;
+  stroke: var(--cad-ink); stroke-width: 2.5; fill: none;
   transition: stroke var(--cad-fade-fast), opacity var(--cad-fade-med);
   pointer-events: none;
 }
 .callout .leader-hit {
-  stroke: rgba(0,0,0,0); stroke-width: 12; fill: none;
+  stroke: rgba(0,0,0,0); stroke-width: 9; fill: none;
   pointer-events: stroke;
 }
-.callout .dot {
-  fill: var(--cad-ink);
-  transition: fill var(--cad-fade-fast);
-  pointer-events: auto;
-}
-
 .main-callout { transition: opacity var(--cad-fade-med); }
 .sub-callout  { opacity: 0; pointer-events: none; transition: opacity var(--cad-fade-med); }
 
@@ -713,18 +750,6 @@ a {
 .cad-stage[data-state="singsource"]   .callout-singsource   .leader,
 .cad-stage[data-state="procdev"]      .callout-procdev      .leader,
 .cad-stage[data-state="resume"]       .callout-resume       .leader { stroke: var(--cad-accent); }
-
-.cad-stage[data-state="about"]        .callout-about        .dot,
-.cad-stage[data-state="contact"]      .callout-contact      .dot,
-.cad-stage[data-state="insights"]     .callout-insights     .dot,
-.cad-stage[data-state="portfolio"]    .callout-portfolio    .dot,
-.cad-stage[data-state="visualcomms"]  .callout-visualcomms  .dot,
-.cad-stage[data-state="userenable"]   .callout-userenable   .dot,
-.cad-stage[data-state="qualcomp"]     .callout-qualcomp     .dot,
-.cad-stage[data-state="singsource"]   .callout-singsource   .dot,
-.cad-stage[data-state="procdev"]      .callout-procdev      .dot,
-.cad-stage[data-state="resume"]       .callout-resume       .dot { fill: var(--cad-accent); }
-
 
 /* ---------- HOME MOBILE NAV (fallback for landing on small screens) ---------- */
 
